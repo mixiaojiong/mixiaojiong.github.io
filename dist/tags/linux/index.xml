@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Persistence</title>
+    <link>http://xiaojiong.net/tags/linux/index.xml</link>
+    <description>Recent content on Persistence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Xiaojiong</copyright>
+    <atom:link href="http://xiaojiong.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>一场linux目录限制所引发的血案</title>
+      <link>http://xiaojiong.net/2015/10/14/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</link>
+      <pubDate>Wed, 14 Oct 2015 20:18:45 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2015/10/14/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</guid>
+      <description>
+
+&lt;p&gt;我们公司最近出现一个BUG，没有上传过用户头像的用户，无法上传头像。而已经上传过头像的用户，可以更新。
+简单介绍一下我们这块的业务：
+我们上传头像采取的文件目录存储结构为/data/personal/968/avater/a.jpg其中968为uid。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-定位问题&#34;&gt;1.定位问题&lt;/h3&gt;
+
+&lt;p&gt;查找日志发现是因为无法在/data/personal/下创建新目录。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-解决问题&#34;&gt;2.解决问题&lt;/h3&gt;
+
+&lt;p&gt;根据业务可以对uid进行hash。也就是目录了变为/data/personal/hash/968/avater/a.jpg&lt;/p&gt;
+
+&lt;h3 id=&#34;3-为什么会无法创建目录&#34;&gt;3.为什么会无法创建目录&lt;/h3&gt;
+
+&lt;p&gt;当无法在/data/personal/下创建新目录时，我查看了一下当时/data/personal/下一共有31998个目录。为什么是31998呢？开始google之。发现我们的服务器采用的是ext3文件格式。Linux为了cpu的搜索效率而规定的,要想改变数目限制需要重新编译内核。我看到在kernel代码中有这样的：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;include/linux/ext2_fs.h:#define EXT2_LINK_MAX           32000
+include/linux/ext3_fs.h:#define EXT3_LINK_MAX           32000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ext3文件系统一级子目录的个数默认为31998(个)，准确地说是32000个。为什么说31998个呢？这是因为mkdir创建一个目录时，目录下默认就会创建两个子目录的，一个是.目录（代表当前目录），另一个是..目录（代表上级目录）。这两个子目录是删除不掉的，“ rm . ” 会得到“rm: cannot remove &lt;code&gt;.&#39; or&lt;/code&gt;..&amp;lsquo;”的提示。所以32000-2=31998。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>linux 常用命令</title>
+      <link>http://xiaojiong.net/2015/06/28/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sun, 28 Jun 2015 19:04:48 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2015/06/28/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>
+
+&lt;h3 id=&#34;去除代码bom头&#34;&gt;去除代码bom头&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;查找：grep -r -I -l $&#39;^\xEF\xBB\xBF&#39; ./
+去除：vim set nobomb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;sed-替换文件内容&#34;&gt;sed 替换文件内容&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;sed -ig &#39;s/a/x/g&#39; test.txt
+test.txt 中字母a替换为x
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;解压&#34;&gt;解压&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;.tar 
+解包：tar xvf FileName.tar
+打包：tar cvf FileName.tar DirName
+（注：tar是打包，不是压缩！）
+———————————————
+.gz
+解压1：gunzip FileName.gz
+解压2：gzip -d FileName.gz
+压缩：gzip FileName
+
+.tar.gz 和 .tgz
+解压：tar zxvf FileName.tar.gz
+压缩：tar zcvf FileName.tar.gz DirName
+———————————————
+.bz2
+解压1：bzip2 -d FileName.bz2
+解压2：bunzip2 FileName.bz2
+压缩： bzip2 -z FileName
+
+.tar.bz2
+解压：tar jxvf FileName.tar.bz2
+压缩：tar jcvf FileName.tar.bz2 DirName
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;未完待续&#34;&gt;未完待续&lt;/h3&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

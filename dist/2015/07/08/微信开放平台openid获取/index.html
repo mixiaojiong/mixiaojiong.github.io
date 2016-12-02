@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>微信开放平台openid获取 &middot; xiaojiong</title>
+        <meta name="description" content="通过点击微信中自定义菜单，直接获取用户openid(用户唯一标识)： &gt; 首先在后台（开发者中心-&gt;接口权限表中查找是否有网页授权获取用户基本信息接口权限，如果没有需要申请。
+设置自定义菜单  在http://mp.weixin.qq.com/debug/ 中选择自定义菜单-》自定义菜单接口创建-》json结构如下
+{ &quot;button&quot;:[ { &quot;type&quot;:&quot;click&quot;, &quot;name&quot;:&quot;今日歌曲&quot;, &quot;key&quot;:&quot;V1001_TODAY_MUSIC&quot; }, { &quot;name&quot;:&quot;菜单&quot;, &quot;sub_button&quot;:[ { &quot;type&quot;:&quot;view&quot;, &quot;name&quot;:&quot;test&quot;, &quot;url&quot;:&quot;https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx520c15f417810387&amp;redirect_uri=http%3A%2F%2Fchong.qq.com%2Fphp%2Findex.php%3Fd%3D%26c%3DwxAdapter%26m%3DmobileDeal%26showwxpaytitle%3D1%26vb2ctag%3D4_2030_5_1194_60&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect&quot; }, { &quot;type&quot;:&quot;click&quot;, &quot;name&quot;:&quot;赞一下我们&quot;, &quot;key&quot;:&quot;V1001_GOOD&quot; }] }] }   网页授权的两种方式  snsapi_base （用户无感知）这里我们选择这种 snsapi_userinfo （如果用户没有关注公众号，需要点击授权页）  第一步获取code  https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect
+ 第二步：通过code换取网页授权access_token $code = $_REQUEST[&#39;code&#39;]; $state = $_REQUEST[&#39;state&#39;]; if (!Comm_Context::Cookie(&#39;openid&#39;)) { error_log(&quot;hehe\n&quot;, 3, &#39;/tmp/a.log&#39;); $url = &quot;https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx8528b110df0f46bb&amp;secret=578d8bdfdb6ff8964ab06c442f062db1&amp;code={$code}&amp;grant_type=authorization_code&quot;; $res = Comm_Curl::request($url); $res = json_decode($res, true); Tool_Login::mkcookie(&#39;openid&#39;, $res[&#39;openid&#39;]); } Comm_Tools::redirect($state);  关于微信内置的调试环境  在开放者工具-&gt;接口测试系统申请，可以申请测试环境（支持回调地址为IP）。">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.17" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="微信开放平台openid获取">
+<meta property="og:description" content="通过点击微信中自定义菜单，直接获取用户openid(用户唯一标识)： &gt; 首先在后台（开发者中心-&gt;接口权限表中查找是否有网页授权获取用户基本信息接口权限，如果没有需要申请。
+设置自定义菜单  在http://mp.weixin.qq.com/debug/ 中选择自定义菜单-》自定义菜单接口创建-》json结构如下
+{ &quot;button&quot;:[ { &quot;type&quot;:&quot;click&quot;, &quot;name&quot;:&quot;今日歌曲&quot;, &quot;key&quot;:&quot;V1001_TODAY_MUSIC&quot; }, { &quot;name&quot;:&quot;菜单&quot;, &quot;sub_button&quot;:[ { &quot;type&quot;:&quot;view&quot;, &quot;name&quot;:&quot;test&quot;, &quot;url&quot;:&quot;https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx520c15f417810387&amp;redirect_uri=http%3A%2F%2Fchong.qq.com%2Fphp%2Findex.php%3Fd%3D%26c%3DwxAdapter%26m%3DmobileDeal%26showwxpaytitle%3D1%26vb2ctag%3D4_2030_5_1194_60&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect&quot; }, { &quot;type&quot;:&quot;click&quot;, &quot;name&quot;:&quot;赞一下我们&quot;, &quot;key&quot;:&quot;V1001_GOOD&quot; }] }] }   网页授权的两种方式  snsapi_base （用户无感知）这里我们选择这种 snsapi_userinfo （如果用户没有关注公众号，需要点击授权页）  第一步获取code  https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect
+ 第二步：通过code换取网页授权access_token $code = $_REQUEST[&#39;code&#39;]; $state = $_REQUEST[&#39;state&#39;]; if (!Comm_Context::Cookie(&#39;openid&#39;)) { error_log(&quot;hehe\n&quot;, 3, &#39;/tmp/a.log&#39;); $url = &quot;https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx8528b110df0f46bb&amp;secret=578d8bdfdb6ff8964ab06c442f062db1&amp;code={$code}&amp;grant_type=authorization_code&quot;; $res = Comm_Curl::request($url); $res = json_decode($res, true); Tool_Login::mkcookie(&#39;openid&#39;, $res[&#39;openid&#39;]); } Comm_Tools::redirect($state);  关于微信内置的调试环境  在开放者工具-&gt;接口测试系统申请，可以申请测试环境（支持回调地址为IP）。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://xiaojiong.net/2015/07/08/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96/">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50430029-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/mixiaojiong">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">微信开放平台openid获取</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2015-07-08" itemprop="datePublished">Wed, Jul 8, 2015</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="http://weibo.com/577500331" itemprop="url" rel="author">xiaojiong</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>通过点击微信中自定义菜单，直接获取用户<strong>openid(用户唯一标识)</strong>：
+&gt; 首先在后台（开发者中心-&gt;接口权限表中查找是否有<strong>网页授权获取用户基本信息</strong>接口权限，如果没有需要申请。</p>
+
+<h3 id="设置自定义菜单">设置自定义菜单</h3>
+
+<blockquote>
+<p>在<a href="http://mp.weixin.qq.com/debug/">http://mp.weixin.qq.com/debug/</a> 中选择自定义菜单-》自定义菜单接口创建-》json结构如下</p>
+
+<pre><code>{
+    &quot;button&quot;:[
+    { 
+        &quot;type&quot;:&quot;click&quot;,
+            &quot;name&quot;:&quot;今日歌曲&quot;,
+            &quot;key&quot;:&quot;V1001_TODAY_MUSIC&quot;
+    },
+    {
+        &quot;name&quot;:&quot;菜单&quot;,
+        &quot;sub_button&quot;:[
+        {   
+            &quot;type&quot;:&quot;view&quot;,
+            &quot;name&quot;:&quot;test&quot;,
+            &quot;url&quot;:&quot;https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx520c15f417810387&amp;redirect_uri=http%3A%2F%2Fchong.qq.com%2Fphp%2Findex.php%3Fd%3D%26c%3DwxAdapter%26m%3DmobileDeal%26showwxpaytitle%3D1%26vb2ctag%3D4_2030_5_1194_60&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect&quot;
+        },
+        {
+            &quot;type&quot;:&quot;click&quot;,
+            &quot;name&quot;:&quot;赞一下我们&quot;,
+            &quot;key&quot;:&quot;V1001_GOOD&quot;
+        }]
+    }]
+}
+</code></pre>
+</blockquote>
+
+<h3 id="网页授权的两种方式">网页授权的两种方式</h3>
+
+<ul>
+<li>snsapi_base （用户无感知）这里我们选择这种</li>
+<li>snsapi_userinfo （如果用户没有关注公众号，需要点击授权页）</li>
+</ul>
+
+<h3 id="第一步获取code">第一步获取code</h3>
+
+<blockquote>
+<p><a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect">https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect</a></p>
+</blockquote>
+
+<h3 id="第二步-通过code换取网页授权access-token">第二步：通过code换取网页授权access_token</h3>
+
+<pre><code>$code = $_REQUEST['code'];
+$state = $_REQUEST['state'];
+if (!Comm_Context::Cookie('openid')) {
+    error_log(&quot;hehe\n&quot;, 3, '/tmp/a.log');                       
+    $url = &quot;https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx8528b110df0f46bb&amp;secret=578d8bdfdb6ff8964ab06c442f062db1&amp;code={$code}&amp;grant_type=authorization_code&quot;;
+    $res = Comm_Curl::request($url);
+    $res  = json_decode($res, true);
+    Tool_Login::mkcookie('openid', $res['openid']);
+}   
+Comm_Tools::redirect($state);
+
+</code></pre>
+
+<h3 id="关于微信内置的调试环境">关于微信内置的调试环境</h3>
+
+<blockquote>
+<p>在开放者工具-&gt;接口测试系统申请，可以申请测试环境（支持回调地址为IP）。</p>
+</blockquote>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+                 <a href="/tags/other/">other</a>
+            
+        </p>
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="https://twitter.com/share?text=%e5%be%ae%e4%bf%a1%e5%bc%80%e6%94%be%e5%b9%b3%e5%8f%b0openid%e8%8e%b7%e5%8f%96&url=http%3a%2f%2fxiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'XXX';
+    var disqus_identifier = 'http:\/\/xiaojiong.net\/2015\/07\/08\/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96\/';
+    var disqus_title = '微信开放平台openid获取';
+    var disqus_url = 'http:\/\/xiaojiong.net\/2015\/07\/08\/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://xiaojiong.net/js/scripts.js"></script>
+    </body>
+</html>
+

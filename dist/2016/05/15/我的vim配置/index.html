@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>我的vim配置 &middot; xiaojiong</title>
+        <meta name="description" content="github地址:https://github.com/mixiaojiong/tool 有好多开源的vim配置，比如k-vim, spf13. 一直想定制一款自己的vim配置。本配置严重借鉴，k-vim和spf13的配置。
+.vimrc let mapleader = &#39;,&#39; &quot; Vundle filetype off set rtp&#43;=~/.vim/bundle/Vundle.vim call vundle#begin() &quot; install Vundle bundles if filereadable(expand(&quot;~/.vimrc.bundles&quot;)) source ~/.vimrc.bundles endif call vundle#end() &quot; 文件 filetype on filetype indent on &quot; 针对不同的文件类型采用不同的缩进格式 filetype plugin on &quot; 允许插件 filetype plugin indent on &quot; 启动自动补全 set encoding=utf-8 &quot; 设置编码自动识别, 中文引号显示 set fileencoding=utf-8 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 &quot; 外观 set background=dark &quot; 主题背景 colorscheme solarized &quot; 颜色主题 syntax on &quot; 语法高亮 set laststatus=2 set showcmd &quot; 显示命令 set number &quot; 显示行号 set ruler &quot; 打开状态栏标尺 set cursorline &quot; 突出显示当前行 set showmatch &quot; 高亮显示匹配的括号 set matchtime=3 &quot; 匹配括号高亮的时间(单位：0.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.17" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="我的vim配置">
+<meta property="og:description" content="github地址:https://github.com/mixiaojiong/tool 有好多开源的vim配置，比如k-vim, spf13. 一直想定制一款自己的vim配置。本配置严重借鉴，k-vim和spf13的配置。
+.vimrc let mapleader = &#39;,&#39; &quot; Vundle filetype off set rtp&#43;=~/.vim/bundle/Vundle.vim call vundle#begin() &quot; install Vundle bundles if filereadable(expand(&quot;~/.vimrc.bundles&quot;)) source ~/.vimrc.bundles endif call vundle#end() &quot; 文件 filetype on filetype indent on &quot; 针对不同的文件类型采用不同的缩进格式 filetype plugin on &quot; 允许插件 filetype plugin indent on &quot; 启动自动补全 set encoding=utf-8 &quot; 设置编码自动识别, 中文引号显示 set fileencoding=utf-8 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 &quot; 外观 set background=dark &quot; 主题背景 colorscheme solarized &quot; 颜色主题 syntax on &quot; 语法高亮 set laststatus=2 set showcmd &quot; 显示命令 set number &quot; 显示行号 set ruler &quot; 打开状态栏标尺 set cursorline &quot; 突出显示当前行 set showmatch &quot; 高亮显示匹配的括号 set matchtime=3 &quot; 匹配括号高亮的时间(单位：0.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://xiaojiong.net/2016/05/15/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE/">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50430029-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/mixiaojiong">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">我的vim配置</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2016-05-15" itemprop="datePublished">Sun, May 15, 2016</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="http://weibo.com/577500331" itemprop="url" rel="author">xiaojiong</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>github地址:<a href="https://github.com/mixiaojiong/tool">https://github.com/mixiaojiong/tool</a>
+有好多开源的vim配置，比如k-vim, spf13.
+一直想定制一款自己的vim配置。本配置严重借鉴，k-vim和spf13的配置。</p>
+
+<h3 id="vimrc">.vimrc</h3>
+
+<pre><code>let mapleader = ','
+&quot; Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+&quot; install Vundle bundles
+if filereadable(expand(&quot;~/.vimrc.bundles&quot;))
+	source ~/.vimrc.bundles
+endif
+
+call vundle#end()
+
+&quot; 文件
+filetype on
+filetype indent on                  &quot; 针对不同的文件类型采用不同的缩进格式
+filetype plugin on                  &quot; 允许插件
+filetype plugin indent on           &quot; 启动自动补全
+set encoding=utf-8                  &quot; 设置编码自动识别, 中文引号显示
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+&quot; 外观
+set background=dark                 &quot; 主题背景
+colorscheme solarized               &quot; 颜色主题
+syntax on                           &quot; 语法高亮
+set laststatus=2
+set showcmd                         &quot; 显示命令
+set number                          &quot; 显示行号
+set ruler                           &quot; 打开状态栏标尺
+set cursorline                      &quot; 突出显示当前行
+set showmatch                      &quot; 高亮显示匹配的括号
+set matchtime=3                    &quot; 匹配括号高亮的时间(单位：0.1s
+set scrolloff=10                    &quot; 光标到屏幕底端保留 10 行 (光标位于屏底看着非常不舒服的)
+set ruler                           &quot; 显示右下角提示栏
+set showmode                        &quot; 显示左下角状态栏
+set listchars=tab:▸\ ,trail:▫
+set wildmenu                        &quot; 使用菜单形式展示列表
+set wildmode=longest,list,full
+&quot; 基本配置
+set autoread                        &quot; 自动加载文件变化
+set wrap                            &quot; 设定折行
+set textwidth=78                    &quot; N个字符折行
+set history=1000                    &quot; 历史记录1000
+set nocompatible                    &quot; 禁用VI相关
+set backspace=indent,eol,start      &quot; 启用backspace删除
+set clipboard+=unnamed              &quot; 共享剪切板
+set showcmd                         &quot; 输入的命令显示出来
+set iskeyword+=_,$,@,%,#,-          &quot; 带有例如以下符号的单词不要被换行切割
+&quot;set mouse=a                         &quot; 鼠标可用
+set confirm                         &quot; 未保存或者仅仅读时，弹出确认
+set nobackup                        &quot; 不生成备份文件
+set noswapfile                      &quot; 不生成 swap 文件
+set bufhidden=hide                  &quot; 当 buffer 被丢弃的时候隐藏
+set noerrorbells                    &quot; 不发出警告声
+&quot; 搜索
+set ignorecase smartcase            &quot; 搜索忽略大写和小写，但有大写字母时仍保持大写和小写敏感
+set hlsearch                        &quot; 高亮搜索
+set incsearch                       &quot; 增量式搜索,逐字符高亮
+
+&quot; 对齐
+set autoindent                      &quot; 继承前一行的缩进方式。特别适用于多行凝视
+set smartindent                     &quot; 智能折叠
+set smarttab                        &quot; 开启新行时使用智能 tab 缩进
+set expandtab                       &quot; 空格取代Tab
+set tabstop=4                       &quot; Tab 键的宽度
+set shiftwidth=4                    &quot; 行交错宽度
+set softtabstop=4                   &quot; 敲入tab键时实际占有的列数
+
+&quot; 自动
+autocmd! bufwritepost .vimrc source %
+autocmd BufNewFile *.sh,*.py,*.php,*.c exec &quot;:call AutoSetFileHead()&quot;
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre &lt;buffer&gt; :call &lt;SID&gt;StripTrailingWhitespaces()
+
+&quot; 修改默认键
+&quot; 同物理行上线直接跳
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+&quot; F2 注释
+map &lt;F2&gt;a :DoxAuthor&lt;CR&gt;
+map &lt;F2&gt;f :Dox&lt;CR&gt;
+map &lt;F2&gt;b :DoxBlock&lt;CR&gt;
+map &lt;F2&gt;c O/** */&lt;Left&gt;&lt;Left&gt;&lt;CR&gt;
+&quot; 常用分屏
+map &lt;silent&gt; &lt;F3&gt; &lt;Esc&gt;:He&lt;CR&gt;
+map &lt;silent&gt; &lt;F4&gt; &lt;Esc&gt;:Ve&lt;CR&gt;
+map &lt;silent&gt; &lt;F5&gt; &lt;Esc&gt;:Te&lt;CR&gt;
+&quot; F6 换行开关
+nnoremap &lt;F6&gt; :set wrap! wrap?&lt;CR&gt;
+&quot; F7 复制粘贴网页代码前开启
+set pastetoggle=&lt;F7&gt;
+&quot; F8 显示可打印字符开关
+nnoremap &lt;F8&gt; :set list! list?&lt;CR&gt;
+&quot; F9 显示行号
+nnoremap &lt;F9&gt; :set nu! nu?&lt;CR&gt;
+&quot; 分屏窗口移动
+map &lt;C-j&gt; &lt;C-W&gt;j
+map &lt;C-k&gt; &lt;C-W&gt;k
+map &lt;C-h&gt; &lt;C-W&gt;h
+map &lt;C-l&gt; &lt;C-W&gt;l
+&quot; 行首，行尾
+noremap H ^
+noremap L $
+&quot; 快速输入命令
+nnoremap ; :
+&quot; 快速搜索
+map &lt;space&gt; /
+&quot; 快速切换tabe
+map &lt;leader&gt;gp gT
+map &lt;leader&gt;gn gt
+&quot; normal模式下切换到确切的tab
+noremap &lt;leader&gt;1 1gt
+noremap &lt;leader&gt;2 2gt
+noremap &lt;leader&gt;3 3gt
+noremap &lt;leader&gt;4 4gt
+noremap &lt;leader&gt;5 5gt
+noremap &lt;leader&gt;6 6gt
+noremap &lt;leader&gt;7 7gt
+noremap &lt;leader&gt;8 8gt
+noremap &lt;leader&gt;9 9gt
+noremap &lt;leader&gt;0 :tablast&lt;CR&gt;
+
+&quot;==========================================
+&quot; FileType Settings  文件类型设置
+&quot;==========================================
+
+&quot; 具体编辑文件类型的一般设置，比如不要 tab 等
+autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+autocmd FileType ruby,javascript,html,css,xml set tabstop=4 shiftwidth=4 expandtab ai
+autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
+autocmd BufRead,BufNewFile *.part set filetype=html
+au BufEnter ~/code/letv/sso/* setlocal tags+=~/code/letv/sso/tags
+
+&quot; 自定义函数 {
+    &quot; 定义函数AutoSetFileHead，自动插入文件头
+    function! AutoSetFileHead()
+        &quot;如果文件类型为.sh文件
+        if &amp;filetype == 'sh'
+            call setline(1, &quot;\#!/bin/bash&quot;)
+        endif
+
+        &quot;如果文件类型为python
+        if &amp;filetype == 'python'
+            call setline(1, &quot;\#!/usr/bin/env python&quot;)
+            call append(1, &quot;\# encoding: utf-8&quot;)
+        endif
+
+        &quot;如果文件类型为.php文件
+        if &amp;filetype == 'php'
+            call setline(1, &quot;&lt;?php&quot;)
+        endif
+
+        &quot;如果文件类型为.c文件
+        if &amp;filetype == 'c'
+            call setline(1, &quot;#include &lt;stdio.h&gt;&quot;)
+            call append(1, &quot;\#include &lt;stdlib.h&gt;&quot;)
+            call setline(3, &quot;&quot;)
+            call setline(4, &quot;int main(void) {&quot;)
+        endif
+
+        normal G
+        normal o
+        normal o
+    endfunc
+
+    &quot; 保存文件时删除多余空格
+    fun! &lt;SID&gt;StripTrailingWhitespaces()
+        let l = line(&quot;.&quot;)
+        let c = col(&quot;.&quot;)
+        %s/\s\+$//e
+        call cursor(l, c)
+    endfun
+&quot; }
+
+</code></pre>
+
+<h3 id="插件-vimrc-bundles">插件.vimrc.bundles</h3>
+
+<pre><code>Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'               &quot; 颜色 
+Plugin 'scrooloose/nerdtree'                            &quot; 文件显示
+Plugin 'scrooloose/syntastic'                           &quot; 语法检查
+Plugin 'Xuyuanp/nerdtree-git-plugin'                    &quot; 文件显示git
+Plugin 'jistr/vim-nerdtree-tabs'                        &quot; 文件标签管理
+Plugin 'terryma/vim-expand-region'                      &quot; 快速范围选中
+Plugin 'vim-scripts/DoxygenToolkit.vim'                 &quot; 注释
+Plugin 'vim-airline/vim-airline'                        &quot; airline
+Plugin 'vim-airline/vim-airline-themes'                 &quot; airline主题
+Plugin 'tpope/vim-fugitive'                             &quot; git
+Plugin 'airblade/vim-gitgutter'                         &quot; git
+Plugin 'junegunn/vim-easy-align'						&quot; 快速对齐
+Plugin 'fatih/vim-go'									&quot; golang
+Plugin 'evanmiller/nginx-vim-syntax'					&quot; nginx配置文件
+Plugin 'Lokaltog/vim-easymotion'						&quot; 强大的跳转
+Plugin 'majutsushi/tagbar'                              &quot; 代码导航
+Plugin 'vim-scripts/matchit.zip'                        &quot; html标签匹配
+Plugin 'valloric/MatchTagAlways'                        &quot; html标签高亮匹配
+Plugin 'maksimr/vim-jsbeautify'                         &quot; 格式化代码
+
+&quot; 插件相关
+&quot; syntastic {
+    &quot; dependence
+    let g:syntastic_error_symbol='&gt;&gt;'
+    let g:syntastic_warning_symbol='&gt;'
+    let g:syntastic_check_on_open=1
+    let g:syntastic_check_on_wq=0
+    let g:syntastic_enable_highlighting=1
+
+    &quot;set statusline+=%#warningmsg#
+    &quot;set statusline+=%{SyntasticStatuslineFlag()}
+    &quot;set statusline+=%*
+
+    &quot;let g:syntastic_always_populate_loc_list = 1
+    &quot;let g:syntastic_auto_loc_list = 1
+    &quot;let g:syntastic_check_on_open = 1
+    &quot;let g:syntastic_check_on_wq = 0
+&quot; }
+
+&quot; DoxygenToolkit {
+    let g:DoxygenToolkit_briefTag_pre=&quot;@synopsis  &quot;
+	let g:DoxygenToolkit_paramTag_pre=&quot;@param &quot;
+	let g:DoxygenToolkit_returnTag=&quot;@return   &quot;
+	let g:DoxygenToolkit_authorName=&quot;zhaorui, zhaorui3@le.com&quot;
+&quot; }
+
+&quot; MatchTagAlways {
+    let g:mta_use_matchparen_group = 1
+    let g:mta_filetypes = {
+        \ 'html' : 1,
+        \ 'xhtml' : 1,
+        \ 'xml' : 1,
+        \ 'php' : 1,
+        \ 'jinja' : 1,
+        \}
+&quot; }
+
+&quot; jsbeautify {
+	map &lt;F6&gt; :call JsBeautify()&lt;cr&gt;
+	&quot; or
+	autocmd FileType javascript noremap &lt;buffer&gt;  &lt;F6&gt; :call JsBeautify()&lt;cr&gt;
+	&quot; for json
+	autocmd FileType json noremap &lt;buffer&gt; &lt;F6&gt; :call JsonBeautify()&lt;cr&gt;
+	&quot; for jsx
+	autocmd FileType jsx noremap &lt;buffer&gt; &lt;F6&gt; :call JsxBeautify()&lt;cr&gt;
+	&quot; for html
+	autocmd FileType html noremap &lt;buffer&gt; &lt;F6&gt; :call HtmlBeautify()&lt;cr&gt;
+	&quot; for css or scss
+	autocmd FileType css noremap &lt;buffer&gt; &lt;F6&gt; :call CSSBeautify()&lt;cr&gt;
+&quot; }
+
+&quot; easymotion {
+    let g:EasyMotion_smartcase = 1
+    &quot;let g:EasyMotion_startofline = 0 &quot; keep cursor colum when JK motion
+    map &lt;Leader&gt;&lt;leader&gt;h &lt;Plug&gt;(easymotion-linebackward)
+    map &lt;Leader&gt;&lt;Leader&gt;j &lt;Plug&gt;(easymotion-j)
+    map &lt;Leader&gt;&lt;Leader&gt;k &lt;Plug&gt;(easymotion-k)
+    map &lt;Leader&gt;&lt;leader&gt;l &lt;Plug&gt;(easymotion-lineforward)
+    &quot; 重复上一次操作, 类似repeat插件, 很强大
+    map &lt;Leader&gt;&lt;leader&gt;. &lt;Plug&gt;(easymotion-repeat)
+&quot; }
+
+&quot; easyalign {
+    vmap &lt;Leader&gt;a &lt;Plug&gt;(EasyAlign)
+    nmap &lt;Leader&gt;a &lt;Plug&gt;(EasyAlign)
+    if !exists('g:easy_align_delimiters')
+    let g:easy_align_delimiters = {}
+    endif
+    let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String'] }
+&quot; }
+&quot; expandregion {
+    vmap v &lt;Plug&gt;(expand_region_expand)
+    vmap V &lt;Plug&gt;(expand_region_shrink)
+&quot; }
+
+&quot; fugitive {
+    &quot; :Gdiff  :Gstatus :Gvsplit
+    nnoremap &lt;leader&gt;ge :Gdiff&lt;CR&gt;
+    &quot; not ready to open
+    &quot; &lt;leader&gt;gb maps to :Gblame&lt;CR&gt;
+    &quot; &lt;leader&gt;gs maps to :Gstatus&lt;CR&gt;
+    &quot; &lt;leader&gt;gd maps to :Gdiff&lt;CR&gt;  和现有冲突
+    &quot; &lt;leader&gt;gl maps to :Glog&lt;CR&gt;
+    &quot; &lt;leader&gt;gc maps to :Gcommit&lt;CR&gt;
+    &quot; &lt;leader&gt;gp maps to :Git push&lt;CR&gt;
+&quot; }
+
+&quot; gitgutter {
+    &quot; 同git diff,实时展示文件中修改的行
+    &quot; 只是不喜欢除了行号多一列, 默认关闭,gs时打开
+    let g:gitgutter_map_keys = 0
+    let g:gitgutter_enabled = 0
+    let g:gitgutter_highlight_lines = 1
+    nnoremap &lt;leader&gt;gs :GitGutterToggle&lt;CR&gt;
+&quot; }
+
+&quot; nerdtree nerdtreetabs {
+    map &lt;Leader&gt;e &lt;plug&gt;NERDTreeTabsToggle&lt;CR&gt;
+    let NERDTreeHighlightCursorline = 1
+    let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$' ]
+    &quot; 只有一个窗口的时候默认关闭
+    autocmd bufenter * if (winnr(&quot;$&quot;) == 1 &amp;&amp; exists(&quot;b:NERDTreeType&quot;) &amp;&amp; b:NERDTreeType == &quot;primary&quot;) | q | end
+    &quot; s/v 分屏打开文件
+    let g:NERDTreeMapOpenSplit = 's'
+    let g:NERDTreeMapOpenVSplit = 'v'
+    let g:nerdtree_tabs_open_on_gui_startup = 1
+    &quot;let g:nerdtree_tabs_open_on_console_startup = 1
+    let g:nerdtree_tabs_smart_startup_focus = 2
+    let g:nerdtree_tabs_autoclose = 1
+&quot; }
+
+&quot; airline {
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+	let g:airline_theme = 'solarized'
+    let g:airline_left_sep = '▶'
+    let g:airline_left_alt_sep = '❯'
+    let g:airline_right_sep = '◀'
+    let g:airline_right_alt_sep = '❮'
+    let g:airline_symbols.linenr = '¶'
+    let g:airline_symbols.branch = '⎇'
+    &quot; 是否打开tabline
+    let g:airline#extensions#tabline#enabled = 1
+&quot; }
+
+&quot; solarized {
+    let g:solarized_termtrans=1
+    let g:solarized_contrast=&quot;normal&quot;
+    let g:solarized_visibility=&quot;normal&quot;
+    &quot;let g:solarized_termcolors=256
+&quot; }
+
+&quot; TagBar {
+    &quot;autocmd VimEnter * TagbarToggle
+	if isdirectory(expand(&quot;~/.vim/bundle/tagbar/&quot;))
+		nnoremap&lt;leader&gt;] :TagbarToggle&lt;CR&gt;
+	endif
+&quot; }
+
+
+</code></pre>
+
+<h3 id="效果图">效果图</h3>
+
+<p><img src="http://ww4.sinaimg.cn/large/68faff51gw1f3xfxxzab4j21kw0y2wof.jpg" alt="vim" /></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+                 <a href="/tags/vim/">vim</a>
+            
+        </p>
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="https://twitter.com/share?text=%e6%88%91%e7%9a%84vim%e9%85%8d%e7%bd%ae&url=http%3a%2f%2fxiaojiong.net%2f2016%2f05%2f15%2f%25E6%2588%2591%25E7%259A%2584vim%25E9%2585%258D%25E7%25BD%25AE%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2016%2f05%2f15%2f%25E6%2588%2591%25E7%259A%2584vim%25E9%2585%258D%25E7%25BD%25AE%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2016%2f05%2f15%2f%25E6%2588%2591%25E7%259A%2584vim%25E9%2585%258D%25E7%25BD%25AE%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'XXX';
+    var disqus_identifier = 'http:\/\/xiaojiong.net\/2016\/05\/15\/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE\/';
+    var disqus_title = '我的vim配置';
+    var disqus_url = 'http:\/\/xiaojiong.net\/2016\/05\/15\/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://xiaojiong.net/js/scripts.js"></script>
+    </body>
+</html>
+
