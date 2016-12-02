@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Persistence</title>
+    <link>http://xiaojiong.net/tags/c/index.xml</link>
+    <description>Recent content on Persistence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Xiaojiong</copyright>
+    <atom:link href="http://xiaojiong.net/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>用c语言编写简单的http server</title>
+      <link>http://xiaojiong.net/2015/06/06/%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84http-server/</link>
+      <pubDate>Sat, 06 Jun 2015 19:55:21 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2015/06/06/%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84http-server/</guid>
+      <description>
+
+&lt;p&gt;#简单的http server&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;为什么要写这个&#34;&gt;为什么要写这个？&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;最近看了很多关于c的书，一直想找一个机会实践下。正好自己也是一个web程序员，
+之前对tcp的三次握手啊，http协议啊，理解的不是很好。于是心里就想写一个简单的http服务器，即能锻炼自己到c语言能力，又能帮助自己理解。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;支持的功能&#34;&gt;支持的功能&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;简单的文本&lt;/li&gt;
+&lt;li&gt;解析图片&lt;/li&gt;
+&lt;li&gt;cgi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;实现分析&#34;&gt;实现分析&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;解析浏览器的请求,在服务目录中查找相应的文件,如果找不到该文件就返回404错误页面&lt;/li&gt;
+&lt;li&gt;检查是否为shell文件&lt;/li&gt;
+&lt;li&gt;如果该文件是shell文件:
+
+&lt;ul&gt;
+&lt;li&gt;判断该文件是否有执行权限,如果没有权限发送403给客户端，否则&lt;/li&gt;
+&lt;li&gt;发送HTTP/1.1 200 OK 给客户端&lt;/li&gt;
+&lt;li&gt;在子进程中popen该CGI程序&lt;/li&gt;
+&lt;li&gt;得到CGI程序的结果文件指针&lt;/li&gt;
+&lt;li&gt;将结果发送到客户端&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;如果该文件不可执行:
+
+&lt;ul&gt;
+&lt;li&gt;发送HTTP/1.1 200 OK 给客户端&lt;/li&gt;
+&lt;li&gt;如果是一个图片文件,根据图片的扩展名发送相应的Content-Type给客户端&lt;/li&gt;
+&lt;li&gt;如果不是图片文件,这里我们简化处理,都当作Content-Type: text/html&lt;/li&gt;
+&lt;li&gt;简单的HTTP协议头有这两行就足够了,再发一个空行表示结束&lt;/li&gt;
+&lt;li&gt;读取文件的内容发送到客户端&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;关闭连接
+￼&lt;/p&gt;
+
+&lt;h3 id=&#34;源码&#34;&gt;源码&lt;/h3&gt;
+
+&lt;p&gt;```
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;arpa/inet.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;time.h&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;#define MAXLEN 4096 //buf最大长度
+#define PORT 8080   //端口号
+#define DOCUMENT &amp;ldquo;/Users/xiaojiong/www&amp;rdquo; //根目录
+#define INDEX &amp;ldquo;index.html&amp;rdquo; //默认文件
+#define PROTOCOL &amp;ldquo;HTTP/1.0&amp;rdquo; //默认协议
+#define SERVER &amp;ldquo;xiaojiong&amp;rdquo; //服务器名称
+#define RFC1123FMT &amp;ldquo;%a, %d %b %Y %H:%M:%S GMT&amp;rdquo; //RFC标准时间&lt;/p&gt;
+
+&lt;p&gt;char &lt;em&gt;get_mime_type( char&lt;/em&gt; name );
+int http_resonse(int client);
+void send_error(FILE *wfd, int status, char *title, char *extra, char *text);
+void send_file(FILE *wfd, char *path, struct stat *statbuf);
+void exec_cgi(FILE *wfd, char *path, struct stat *statbuf);
+void send_headers(FILE *wfd, int status, char *title, char *extra, char *mime, int length, time_t date);&lt;/p&gt;
+
+&lt;p&gt;/**
+ * @synopsis 主函数， 实现socket和fork
+ *
+ * @param argc 标准输入
+ * @param argv 标准输入
+ *
+ * @return 0
+ */
+int main(int argc, char** argv) {
+    struct sockaddr_in stSockAddr;
+    int SocketFD = socket(PF_INET, SOCK_STREAM, 0);
+    pid_t pid;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if(-1 == SocketFD)
+{
+    perror(&amp;quot;can not create socket&amp;quot;);
+    exit(EXIT_FAILURE);
+}
+
+memset(&amp;amp;stSockAddr, 0, sizeof(struct sockaddr_in));
+
+stSockAddr.sin_family = AF_INET;
+stSockAddr.sin_port = htons(PORT);
+stSockAddr.sin_addr.s_addr = INADDR_ANY;
+
+if(-1 == bind(SocketFD,(const struct sockaddr *)&amp;amp;stSockAddr, sizeof(struct sockaddr_in)))
+{
+    perror(&amp;quot;error bind failed&amp;quot;);
+    close(SocketFD);
+    exit(EXIT_FAILURE);
+}
+
+if(-1 == listen(SocketFD, 10))
+{
+    perror(&amp;quot;error listen failed&amp;quot;);
+    close(SocketFD);
+    exit(EXIT_FAILURE);
+} 
+while(1) {
+    int client = accept(SocketFD, NULL, NULL);
+
+    if(0 &amp;gt; client)
+    {
+        perror(&amp;quot;error accept failed&amp;quot;);
+        close(SocketFD);
+        exit(EXIT_FAILURE);
+    }
+    pid = fork();
+    if (pid &amp;lt; 0) {
+        perror(&amp;quot;error fork failed&amp;quot;);
+        exit(EXIT_FAILURE);
+    } else if(pid == 0) {
+        http_resonse(client);
+        close(client);
+    } else {
+        close(client);
+        continue;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+/**
+ * @synopsis 处理http请求
+ *
+ * @param client 阻塞的客户端连接
+ *
+ * @return 0
+ &lt;em&gt;/
+int http_resonse(int client) {
+    int cgi = 0;
+    char&lt;/em&gt; dot;
+    char *method;
+    char *path;
+    char *protocol;
+    char buf[MAXLEN];
+    char file[MAXLEN] = DOCUMENT;
+    struct stat statbuf;
+    FILE *rfd, *wfd;
+    rfd = fdopen(client, &amp;ldquo;a+&amp;rdquo;);&lt;br /&gt;
+    wfd = fdopen(dup(client), &amp;ldquo;w&amp;rdquo;);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//打印请求信息
+if (!fgets(buf, sizeof(buf), rfd)) 
+    return -1;
+printf(&amp;quot;URL: %s&amp;quot;, buf);
+method = strtok(buf, &amp;quot; &amp;quot;);
+path = strtok(NULL, &amp;quot; &amp;quot;);
+protocol = strtok(NULL, &amp;quot;\r&amp;quot;);
+if (!method || !path || !protocol) 
+    return -1;
+strcat(file, path);
+if (strcasecmp(method, &amp;quot;GET&amp;quot;) != 0) {
+    send_error(wfd, 501, &amp;quot;Not supported&amp;quot;, NULL, &amp;quot;Method is not supported.&amp;quot;);
+} else if (stat(file, &amp;amp;statbuf) &amp;lt; 0) {
+    send_error(wfd, 404, &amp;quot;Not Found&amp;quot;, NULL, &amp;quot;File not found.&amp;quot;);
+}
+//输出文件
+if (strcasecmp(path, &amp;quot;/&amp;quot;) == 0) {
+    strcat(file, INDEX);
+}
+//cgi
+dot = strrchr( file, &#39;.&#39; );
+if ( strcmp( dot, &amp;quot;.sh&amp;quot; ) == 0)
+    cgi = 1;
+if (cgi) {
+    exec_cgi(wfd, file, &amp;amp;statbuf);
+} else {
+    send_file(wfd, file, &amp;amp;statbuf);
+}
+fclose(rfd);
+fclose(wfd);
+return 0;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+/**
+ * @synopsis 发送失败信息
+ *
+ * @param wfd 输出文件描述符
+ * @param status http协议状态码
+ * @param title 标题
+ * @param extra http头的附加信息
+ * @param text 内容
+ */
+void send_error(FILE *wfd, int status, char *title, char *extra, char *text) {
+    send_headers(wfd, status, title, extra, &amp;ldquo;text/html&amp;rdquo;, -1, -1);
+    fprintf(wfd, &amp;ldquo;&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;%d %s&lt;/TITLE&gt;&lt;/HEAD&gt;\r\n&amp;rdquo;, status, title);
+    fprintf(wfd, &amp;ldquo;&lt;BODY&gt;&lt;H4&gt;%d %s&lt;/H4&gt;\r\n&amp;rdquo;, status, title);
+    fprintf(wfd, &amp;ldquo;%s\r\n&amp;rdquo;, text);
+    fprintf(wfd, &amp;ldquo;&lt;/BODY&gt;&lt;/HTML&gt;\r\n&amp;rdquo;);
+}
+/**
+ * @synopsis 发送文件内容给客户端(cgi)
+ *
+ * @param wfd 输出文件描述符
+ * @param path 文件路径
+ * @param statbuf 文件状态结构体
+ */
+void exec_cgi(FILE *wfd, char *path, struct stat *statbuf) {
+    char data[MAXLEN];
+    int n;
+    //检查文件是否有可执行权限
+    if (((statbuf-&amp;gt;st_mode &amp;amp; S_IXUSR) != S_IXUSR) &amp;amp;&amp;amp; ((statbuf-&amp;gt;st_mode &amp;amp; S_IXGRP) != S_IXGRP) &amp;amp;&amp;amp; ((statbuf-&amp;gt;st_mode &amp;amp; S_IXOTH) != S_IXOTH)) {
+        send_error(wfd, 403, &amp;ldquo;File not exec&amp;rdquo;, NULL, &amp;ldquo;File not exec&amp;rdquo;);
+    } else {
+        int length = -1;
+        send_headers(wfd, 200, &amp;ldquo;OK&amp;rdquo;, NULL, get_mime_type(path), length, statbuf-&amp;gt;st_mtime);
+        FILE *pp;
+        pp = popen(path, &amp;ldquo;r&amp;rdquo;);
+        if (pp != NULL) {
+            while ((n = fread(data, 1, sizeof(data), pp)) &amp;gt; 0)  {
+                fwrite(data, 1, n, wfd);
+            }
+            pclose(pp);
+        }
+    }
+}
+/**
+ * @synopsis 发送文件内容给客户端
+ *
+ * @param wfd 输出文件描述符
+ * @param path 文件路径
+ * @param statbuf 文件状态结构体
+ */
+void send_file(FILE *wfd, char *path, struct stat *statbuf) {
+    char data[MAXLEN];
+    int n;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FILE *file = fopen(path, &amp;quot;r&amp;quot;);
+if (!file) {
+    send_error(wfd, 403, &amp;quot;Forbidden&amp;quot;, NULL, &amp;quot;Access denied.&amp;quot;);
+} else {
+    int length = S_ISREG(statbuf-&amp;gt;st_mode) ? statbuf-&amp;gt;st_size : -1;
+    send_headers(wfd, 200, &amp;quot;OK&amp;quot;, NULL, get_mime_type(path), length, statbuf-&amp;gt;st_mtime);
+    while ((n = fread(data, 1, sizeof(data), file)) &amp;gt; 0)  {
+        fwrite(data, 1, n, wfd);
+    }
+    fclose(file);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+/**
+ * @synopsis 发送http响应头信息
+ *
+ * @param wfd 输出文件描述符
+ * @param status http协议状态码
+ * @param title 标题
+ * @param extra http头的附加信息
+ * @param mime  Content-Type
+ * @param length 响应体内容大小
+ * @param date 时间
+ */
+void send_headers(FILE *wfd, int status, char *title, char *extra, char *mime, int length, time_t date) {
+    time_t now;
+    char timebuf[MAXLEN];&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fprintf(wfd, &amp;quot;%s %d %s\r\n&amp;quot;, PROTOCOL, status, title);
+fprintf(wfd, &amp;quot;Server: %s\r\n&amp;quot;, SERVER);
+now = time(NULL);
+strftime(timebuf, sizeof(timebuf), RFC1123FMT, gmtime(&amp;amp;now));
+fprintf(wfd, &amp;quot;Date: %s\r\n&amp;quot;, timebuf);
+if (extra) fprintf(wfd, &amp;quot;%s\r\n&amp;quot;, extra);
+if (mime) fprintf(wfd, &amp;quot;Content-Type: %s\r\n&amp;quot;, mime);
+if (length &amp;gt;= 0) fprintf(wfd, &amp;quot;Content-Length: %d\r\n&amp;quot;, length);
+if (date != -1) {
+    strftime(timebuf, sizeof(timebuf), RFC1123FMT, gmtime(&amp;amp;date));
+    fprintf(wfd, &amp;quot;Last-Modified: %s\r\n&amp;quot;, timebuf);
+}
+fprintf(wfd, &amp;quot;Connection: close\r\n&amp;quot;);
+fprintf(wfd, &amp;quot;\r\n&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+/**
+ * @synopsis 根据文件名获取http Content-Type
+ *
+ * @param name 文件名
+ *
+ * @return Content-Type
+ */
+char &lt;em&gt;get_mime_type( char&lt;/em&gt; name )
+{
+    char* dot;
+    dot = strrchr( name, &amp;lsquo;.&amp;rsquo; );
+    if ( dot == (char*) 0 )
+        return &amp;ldquo;text/plain; charset=UTF-8&amp;rdquo;;
+    if ( strcmp( dot, &amp;ldquo;.html&amp;rdquo; ) == 0 || strcmp( dot, &amp;ldquo;.htm&amp;rdquo; ) == 0 || strcmp( dot, &amp;ldquo;.sh&amp;rdquo; ) == 0)
+        return &amp;ldquo;text/html; charset=UTF-8&amp;rdquo;;
+    if ( strcmp( dot, &amp;ldquo;.xhtml&amp;rdquo; ) == 0 || strcmp( dot, &amp;ldquo;.xht&amp;rdquo; ) == 0 )
+        return &amp;ldquo;application/xhtml+xml; charset=UTF-8&amp;rdquo;;
+    if ( strcmp( dot, &amp;ldquo;.jpg&amp;rdquo; ) == 0 || strcmp( dot, &amp;ldquo;.jpeg&amp;rdquo; ) == 0 || strcmp( dot, &amp;ldquo;.ico&amp;rdquo; ) == 0)
+        return &amp;ldquo;image/jpeg&amp;rdquo;;
+    if ( strcmp( dot, &amp;ldquo;.gif&amp;rdquo; ) == 0 )
+        return &amp;ldquo;image/gif&amp;rdquo;;
+    if ( strcmp( dot, &amp;ldquo;.png&amp;rdquo; ) == 0 )
+        return &amp;ldquo;image/png&amp;rdquo;;
+    if ( strcmp( dot, &amp;ldquo;.css&amp;rdquo; ) == 0 )
+        return &amp;ldquo;text/xml; charset=UTF-8&amp;rdquo;;
+    return &amp;ldquo;text/plain; charset=UTF-8&amp;rdquo;;
+}
+```&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

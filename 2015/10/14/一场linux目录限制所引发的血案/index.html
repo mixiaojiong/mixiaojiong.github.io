@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>一场linux目录限制所引发的血案 &middot; xiaojiong</title>
+        <meta name="description" content="我们公司最近出现一个BUG，没有上传过用户头像的用户，无法上传头像。而已经上传过头像的用户，可以更新。 简单介绍一下我们这块的业务： 我们上传头像采取的文件目录存储结构为/data/personal/968/avater/a.jpg其中968为uid。
+1.定位问题 查找日志发现是因为无法在/data/personal/下创建新目录。
+2.解决问题 根据业务可以对uid进行hash。也就是目录了变为/data/personal/hash/968/avater/a.jpg
+3.为什么会无法创建目录 当无法在/data/personal/下创建新目录时，我查看了一下当时/data/personal/下一共有31998个目录。为什么是31998呢？开始google之。发现我们的服务器采用的是ext3文件格式。Linux为了cpu的搜索效率而规定的,要想改变数目限制需要重新编译内核。我看到在kernel代码中有这样的：
+include/linux/ext2_fs.h:#define EXT2_LINK_MAX 32000 include/linux/ext3_fs.h:#define EXT3_LINK_MAX 32000  ext3文件系统一级子目录的个数默认为31998(个)，准确地说是32000个。为什么说31998个呢？这是因为mkdir创建一个目录时，目录下默认就会创建两个子目录的，一个是.目录（代表当前目录），另一个是..目录（代表上级目录）。这两个子目录是删除不掉的，“ rm . ” 会得到“rm: cannot remove .&#39; or..&lsquo;”的提示。所以32000-2=31998。">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.17" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="一场linux目录限制所引发的血案">
+<meta property="og:description" content="我们公司最近出现一个BUG，没有上传过用户头像的用户，无法上传头像。而已经上传过头像的用户，可以更新。 简单介绍一下我们这块的业务： 我们上传头像采取的文件目录存储结构为/data/personal/968/avater/a.jpg其中968为uid。
+1.定位问题 查找日志发现是因为无法在/data/personal/下创建新目录。
+2.解决问题 根据业务可以对uid进行hash。也就是目录了变为/data/personal/hash/968/avater/a.jpg
+3.为什么会无法创建目录 当无法在/data/personal/下创建新目录时，我查看了一下当时/data/personal/下一共有31998个目录。为什么是31998呢？开始google之。发现我们的服务器采用的是ext3文件格式。Linux为了cpu的搜索效率而规定的,要想改变数目限制需要重新编译内核。我看到在kernel代码中有这样的：
+include/linux/ext2_fs.h:#define EXT2_LINK_MAX 32000 include/linux/ext3_fs.h:#define EXT3_LINK_MAX 32000  ext3文件系统一级子目录的个数默认为31998(个)，准确地说是32000个。为什么说31998个呢？这是因为mkdir创建一个目录时，目录下默认就会创建两个子目录的，一个是.目录（代表当前目录），另一个是..目录（代表上级目录）。这两个子目录是删除不掉的，“ rm . ” 会得到“rm: cannot remove .&#39; or..&lsquo;”的提示。所以32000-2=31998。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://xiaojiong.net/2015/10/14/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50430029-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/mixiaojiong">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">一场linux目录限制所引发的血案</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2015-10-14" itemprop="datePublished">Wed, Oct 14, 2015</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="http://weibo.com/577500331" itemprop="url" rel="author">xiaojiong</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>我们公司最近出现一个BUG，没有上传过用户头像的用户，无法上传头像。而已经上传过头像的用户，可以更新。
+简单介绍一下我们这块的业务：
+我们上传头像采取的文件目录存储结构为/data/personal/968/avater/a.jpg其中968为uid。</p>
+
+<h3 id="1-定位问题">1.定位问题</h3>
+
+<p>查找日志发现是因为无法在/data/personal/下创建新目录。</p>
+
+<h3 id="2-解决问题">2.解决问题</h3>
+
+<p>根据业务可以对uid进行hash。也就是目录了变为/data/personal/hash/968/avater/a.jpg</p>
+
+<h3 id="3-为什么会无法创建目录">3.为什么会无法创建目录</h3>
+
+<p>当无法在/data/personal/下创建新目录时，我查看了一下当时/data/personal/下一共有31998个目录。为什么是31998呢？开始google之。发现我们的服务器采用的是ext3文件格式。Linux为了cpu的搜索效率而规定的,要想改变数目限制需要重新编译内核。我看到在kernel代码中有这样的：</p>
+
+<pre><code>include/linux/ext2_fs.h:#define EXT2_LINK_MAX           32000
+include/linux/ext3_fs.h:#define EXT3_LINK_MAX           32000
+</code></pre>
+
+<p>ext3文件系统一级子目录的个数默认为31998(个)，准确地说是32000个。为什么说31998个呢？这是因为mkdir创建一个目录时，目录下默认就会创建两个子目录的，一个是.目录（代表当前目录），另一个是..目录（代表上级目录）。这两个子目录是删除不掉的，“ rm . ” 会得到“rm: cannot remove <code>.' or</code>..&lsquo;”的提示。所以32000-2=31998。</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+                 <a href="/tags/linux/">linux</a>
+            
+        </p>
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="https://twitter.com/share?text=%e4%b8%80%e5%9c%balinux%e7%9b%ae%e5%bd%95%e9%99%90%e5%88%b6%e6%89%80%e5%bc%95%e5%8f%91%e7%9a%84%e8%a1%80%e6%a1%88&url=http%3a%2f%2fxiaojiong.net%2f2015%2f10%2f14%2f%25E4%25B8%2580%25E5%259C%25BAlinux%25E7%259B%25AE%25E5%25BD%2595%25E9%2599%2590%25E5%2588%25B6%25E6%2589%2580%25E5%25BC%2595%25E5%258F%2591%25E7%259A%2584%25E8%25A1%2580%25E6%25A1%2588%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2015%2f10%2f14%2f%25E4%25B8%2580%25E5%259C%25BAlinux%25E7%259B%25AE%25E5%25BD%2595%25E9%2599%2590%25E5%2588%25B6%25E6%2589%2580%25E5%25BC%2595%25E5%258F%2591%25E7%259A%2584%25E8%25A1%2580%25E6%25A1%2588%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2015%2f10%2f14%2f%25E4%25B8%2580%25E5%259C%25BAlinux%25E7%259B%25AE%25E5%25BD%2595%25E9%2599%2590%25E5%2588%25B6%25E6%2589%2580%25E5%25BC%2595%25E5%258F%2591%25E7%259A%2584%25E8%25A1%2580%25E6%25A1%2588%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'XXX';
+    var disqus_identifier = 'http:\/\/xiaojiong.net\/2015\/10\/14\/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88\/';
+    var disqus_title = '一场linux目录限制所引发的血案';
+    var disqus_url = 'http:\/\/xiaojiong.net\/2015\/10\/14\/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://xiaojiong.net/js/scripts.js"></script>
+    </body>
+</html>
+

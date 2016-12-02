@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>mysql 聚簇索引 &middot; xiaojiong</title>
+        <meta name="description" content=" 一、什么是聚簇索引？ 百科定义：聚簇索引也叫簇类索引，是一种对磁盘上实际数据重新组织以按指定的一个或多个列的值排序。由于聚簇索引的索引页面指针指向数据页面，所以使用聚簇索引查找数据几乎总是比使用非聚簇索引快。每张表只能建一个聚簇索引，并且建聚簇索引需要至少相当该表120%的附加空间，以存放该表的副本和索引中间页。
+二、特点：  聚簇索引确定表中数据的物理顺序 一个表只能包含一个聚簇索引 聚簇索引对于那些经常要搜索范围值的列特别有效（数据在物理上是顺序的）  三、组织形式 聚簇索引是一种数据存储方式，它实际上是在同一个结构中保存了B&#43;树索引和数据行，InnoDB表是按照聚簇索引组织的。InnoDB通过主键聚簇数据，如果没有定义主键，会选择一个唯一的非空索引代替，如图：
+四、缺点  插入速度严重依赖于插入顺序，按照主键的顺序插入到数据表中速度是最快的。 更新聚簇索引列的代价很高，因为需要移动新的数据。 在插入新行，或者主键更新需要移动行的时候，可能导致页分裂，从而导致占用更多的磁盘空间。 二级索引（非聚簇）可能比想象的要大，因为二级索引的叶子节点中包含了引用行的主键列。 二级索引访问需要2次索引查找，而不是一次，因为二级索引保存的不是行的物理位置，而是主键值。  ">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.17" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="mysql 聚簇索引">
+<meta property="og:description" content=" 一、什么是聚簇索引？ 百科定义：聚簇索引也叫簇类索引，是一种对磁盘上实际数据重新组织以按指定的一个或多个列的值排序。由于聚簇索引的索引页面指针指向数据页面，所以使用聚簇索引查找数据几乎总是比使用非聚簇索引快。每张表只能建一个聚簇索引，并且建聚簇索引需要至少相当该表120%的附加空间，以存放该表的副本和索引中间页。
+二、特点：  聚簇索引确定表中数据的物理顺序 一个表只能包含一个聚簇索引 聚簇索引对于那些经常要搜索范围值的列特别有效（数据在物理上是顺序的）  三、组织形式 聚簇索引是一种数据存储方式，它实际上是在同一个结构中保存了B&#43;树索引和数据行，InnoDB表是按照聚簇索引组织的。InnoDB通过主键聚簇数据，如果没有定义主键，会选择一个唯一的非空索引代替，如图：
+四、缺点  插入速度严重依赖于插入顺序，按照主键的顺序插入到数据表中速度是最快的。 更新聚簇索引列的代价很高，因为需要移动新的数据。 在插入新行，或者主键更新需要移动行的时候，可能导致页分裂，从而导致占用更多的磁盘空间。 二级索引（非聚簇）可能比想象的要大，因为二级索引的叶子节点中包含了引用行的主键列。 二级索引访问需要2次索引查找，而不是一次，因为二级索引保存的不是行的物理位置，而是主键值。  ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50430029-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/mixiaojiong">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">mysql 聚簇索引</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2016-04-15" itemprop="datePublished">Fri, Apr 15, 2016</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="http://weibo.com/577500331" itemprop="url" rel="author">xiaojiong</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<h3 id="一-什么是聚簇索引">一、什么是聚簇索引？</h3>
+
+<p>百科定义：聚簇索引也叫簇类索引，是一种对磁盘上实际数据重新组织以按指定的一个或多个列的值排序。由于聚簇索引的索引页面指针指向数据页面，所以使用聚簇索引查找数据几乎总是比使用非聚簇索引快。每张表只能建一个聚簇索引，并且建聚簇索引需要至少相当该表120%的附加空间，以存放该表的副本和索引中间页。</p>
+
+<h3 id="二-特点">二、特点：</h3>
+
+<ul>
+<li>聚簇索引确定表中数据的物理顺序</li>
+<li>一个表只能包含一个聚簇索引</li>
+<li>聚簇索引对于那些经常要搜索范围值的列特别有效（数据在物理上是顺序的）</li>
+</ul>
+
+<h3 id="三-组织形式">三、组织形式</h3>
+
+<p>聚簇索引是一种数据存储方式，它实际上是在同一个结构中保存了B+树索引和数据行，InnoDB表是按照聚簇索引组织的。InnoDB通过主键聚簇数据，如果没有定义主键，会选择一个唯一的非空索引代替，如图：</p>
+
+<p><img src="http://ww3.sinaimg.cn/large/68faff51jw1f2w8ellxmjj20jc0gnwfg.jpg" alt="组织结构图" /></p>
+
+<h3 id="四-缺点">四、缺点</h3>
+
+<ul>
+<li>插入速度严重依赖于插入顺序，按照主键的顺序插入到数据表中速度是最快的。</li>
+<li>更新聚簇索引列的代价很高，因为需要移动新的数据。</li>
+<li>在插入新行，或者主键更新需要移动行的时候，可能导致页分裂，从而导致占用更多的磁盘空间。</li>
+<li>二级索引（非聚簇）可能比想象的要大，因为二级索引的叶子节点中包含了引用行的主键列。</li>
+<li>二级索引访问需要2次索引查找，而不是一次，因为二级索引保存的不是行的物理位置，而是主键值。</li>
+</ul>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+                 <a href="/tags/mysql/">mysql</a>
+            
+        </p>
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="https://twitter.com/share?text=mysql%20%e8%81%9a%e7%b0%87%e7%b4%a2%e5%bc%95&url=http%3a%2f%2fxiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'XXX';
+    var disqus_identifier = 'http:\/\/xiaojiong.net\/2016\/04\/15\/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95\/';
+    var disqus_title = 'mysql 聚簇索引';
+    var disqus_url = 'http:\/\/xiaojiong.net\/2016\/04\/15\/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://xiaojiong.net/js/scripts.js"></script>
+    </body>
+</html>
+

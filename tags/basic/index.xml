@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Persistence</title>
+    <link>http://xiaojiong.net/tags/basic/index.xml</link>
+    <description>Recent content on Persistence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Xiaojiong</copyright>
+    <atom:link href="http://xiaojiong.net/tags/basic/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>数据结构－－双向链表</title>
+      <link>http://xiaojiong.net/2015/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Mon, 07 Dec 2015 23:03:05 +0800</pubDate>
+      
+      <guid>http://xiaojiong.net/2015/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
+      <description>
+
+&lt;p&gt;双向链表是数据结构中很重要的一种结构。双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p&gt;
+
+&lt;h3 id=&#34;链表的实现很简单-通常只需要三个关键元素&#34;&gt;链表的实现很简单，通常只需要三个关键元素：&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;指向上个元素的指针&lt;/li&gt;
+&lt;li&gt;指向下个元素的指针&lt;/li&gt;
+&lt;li&gt;数据容器&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;双向链表的结构&#34;&gt;双向链表的结构&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;1 typedef struct ListNode{//链表节点
+2     int data; //数据
+3     struct ListNode* prev;//前节点
+4     struct ListNode* next;//后节点
+5 } LIST_NODE;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;下面的图片是双向链表图：
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/68faff51jw1eyr5t776m7j20i903x3yk.jpg&#34; alt=&#34;双向链表&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;双向链表的应用之php&#34;&gt;双向链表的应用之php&lt;/h3&gt;
+
+&lt;p&gt;Zend引擎中的链表是双链表，通过双链表的任意节点都能方便的对链表进行遍历。
+&amp;gt; Zend引擎的哈希表实现是哈希表和双链表的混合实现，这也是为了方便哈希表的遍历。&lt;/p&gt;
+
+&lt;p&gt;Zend引擎的实现也很简单，如下两个是核心的数据接口，第一个是元素节点，第二个是链表容器。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;typedef struct _zend_llist_element {
+    struct _zend_llist_element *next;
+    struct _zend_llist_element *prev;
+    char data[1]; /* Needs to always be last in the struct */
+} zend_llist_element;
+ 
+typedef struct _zend_llist {
+    zend_llist_element *head;
+    zend_llist_element *tail;
+    size_t count;
+    size_t size;
+    llist_dtor_func_t dtor;
+    unsigned char persistent;
+    zend_llist_element *traverse_ptr;
+} zend_llist;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;节点元素只含有前面提到的3个元素，第三个字段data和哈希表的实现一样， 是一个柔性结构体。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/68faff51jw1eyr5c32nnij20hl0bzmz0.jpg&#34; alt=&#34;Zend zend_llist结构&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;为了提高性能增加了链表头和尾节点地址，以及链表中元素的个数。
+最后的traverse_ptr字段是为了方便在遍历过程中记录当前链表的内部指针，和哈希表中的:Bucket *pInternalPointer;字段一个作用。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
