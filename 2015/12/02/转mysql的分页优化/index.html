@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>【转】MySQL的分页优化 &middot; xiaojiong</title>
-        <meta name="description" content="原文链接：http://www.amogoo.com/article/9 准备工作  本文示例环境为MySQL5.6、InnoDB 建表与数据初始化，数据来源于官网提供的employees库salaries表  CREATE TABLE `t_salaries` ( `id` int(11) NOT NULL AUTO_INCREMENT, `emp_no` int(11) NOT NULL, `salary` int(11) NOT NULL, `from_date` date NOT NULL, `to_date` date NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;   分页语法 MySQL的分页语法非常简单：
+        <meta name="description" content="原文链接：http://www.amogoo.com/article/9 准备工作  本文示例环境为MySQL5.6、InnoDB 建表与数据初始化，数据来源于官网提供的employees库salaries表  CREATE TABLE `t_salaries` ( `id` int(11) NOT NULL AUTO_INCREMENT, `emp_no` int(11) NOT NULL, `salary` int(11) NOT NULL, `from_date` date NOT NULL, `to_date` date NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;  分页语法 MySQL的分页语法非常简单：
 select * from table where ? order by c asc|desc limit m, n;  表示在table中，根据where过滤并通过c列排序后的结果集，获取从m行开始往后的n条数据，其中不包括第m行，用区间可表示为[m&#43;1, m&#43;n]。
 实验 那么如何来优化呢，废话不多说，下面直接上干货。 场景1（全表扫描带来的性能问题）：
 -- 先看表数据 mysql&gt; select count(*) from t_salaries; &#43;----------&#43; | count(*) | &#43;----------&#43; | 2844047 | &#43;----------&#43; 1 row in set -- sql1 mysql&gt; select * from t_salaries order by emp_no asc limit 0,20; .">
@@ -14,7 +14,7 @@ select * from table where ? order by c asc|desc limit m, n;  表示在table中�
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="【转】MySQL的分页优化">
-<meta property="og:description" content="原文链接：http://www.amogoo.com/article/9 准备工作  本文示例环境为MySQL5.6、InnoDB 建表与数据初始化，数据来源于官网提供的employees库salaries表  CREATE TABLE `t_salaries` ( `id` int(11) NOT NULL AUTO_INCREMENT, `emp_no` int(11) NOT NULL, `salary` int(11) NOT NULL, `from_date` date NOT NULL, `to_date` date NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;   分页语法 MySQL的分页语法非常简单：
+<meta property="og:description" content="原文链接：http://www.amogoo.com/article/9 准备工作  本文示例环境为MySQL5.6、InnoDB 建表与数据初始化，数据来源于官网提供的employees库salaries表  CREATE TABLE `t_salaries` ( `id` int(11) NOT NULL AUTO_INCREMENT, `emp_no` int(11) NOT NULL, `salary` int(11) NOT NULL, `from_date` date NOT NULL, `to_date` date NOT NULL, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;  分页语法 MySQL的分页语法非常简单：
 select * from table where ? order by c asc|desc limit m, n;  表示在table中，根据where过滤并通过c列排序后的结果集，获取从m行开始往后的n条数据，其中不包括第m行，用区间可表示为[m&#43;1, m&#43;n]。
 实验 那么如何来优化呢，废话不多说，下面直接上干货。 场景1（全表扫描带来的性能问题）：
 -- 先看表数据 mysql&gt; select count(*) from t_salaries; &#43;----------&#43; | count(*) | &#43;----------&#43; | 2844047 | &#43;----------&#43; 1 row in set -- sql1 mysql&gt; select * from t_salaries order by emp_no asc limit 0,20; .">
@@ -105,18 +105,18 @@ ga('send', 'pageview');
 
 <ol>
 <li>本文示例环境为MySQL5.6、InnoDB</li>
-<li>建表与数据初始化，数据来源于官网提供的employees库salaries表
-<code>
-CREATE TABLE `t_salaries` (
-`id` int(11) NOT NULL AUTO_INCREMENT,
-`emp_no` int(11) NOT NULL,
-`salary` int(11) NOT NULL,
-`from_date` date NOT NULL,
-`to_date` date NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-</code></li>
+<li>建表与数据初始化，数据来源于官网提供的employees库salaries表</li>
 </ol>
+
+<pre><code>CREATE TABLE `t_salaries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_no` int(11) NOT NULL,
+  `salary` int(11) NOT NULL,
+  `from_date` date NOT NULL,
+  `to_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+</code></pre>
 
 <h3 id="分页语法">分页语法</h3>
 

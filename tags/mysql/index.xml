@@ -843,18 +843,18 @@ UPDATE `queue` SET `status` = &#39;n&#39;, `update_times` = 1451879201, `conn_id
 
 &lt;ol&gt;
 &lt;li&gt;本文示例环境为MySQL5.6、InnoDB&lt;/li&gt;
-&lt;li&gt;建表与数据初始化，数据来源于官网提供的employees库salaries表
-&lt;code&gt;
-CREATE TABLE `t_salaries` (
-`id` int(11) NOT NULL AUTO_INCREMENT,
-`emp_no` int(11) NOT NULL,
-`salary` int(11) NOT NULL,
-`from_date` date NOT NULL,
-`to_date` date NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;建表与数据初始化，数据来源于官网提供的employees库salaries表&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE TABLE `t_salaries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_no` int(11) NOT NULL,
+  `salary` int(11) NOT NULL,
+  `from_date` date NOT NULL,
+  `to_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;分页语法&#34;&gt;分页语法&lt;/h3&gt;
 
