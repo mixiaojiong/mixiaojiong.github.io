@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Persistence</title>
-    <link>http://xiaojiong.net/tags/mysql/index.xml</link>
+    <link>http://www.xiaojiong.net/tags/mysql/index.xml</link>
     <description>Recent content on Persistence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Xiaojiong</copyright>
-    <atom:link href="http://xiaojiong.net/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.xiaojiong.net/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>mysql 聚簇索引</title>
-      <link>http://xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/</link>
+      <link>http://www.xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/</link>
       <pubDate>Fri, 15 Apr 2016 05:21:44 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/</guid>
+      <guid>http://www.xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/</guid>
       <description>
 
 &lt;h3 id=&#34;一-什么是聚簇索引&#34;&gt;一、什么是聚簇索引？&lt;/h3&gt;
@@ -49,10 +49,10 @@
     
     <item>
       <title>mysql 多版本并发控制协议（MVCC）</title>
-      <link>http://xiaojiong.net/2016/04/13/mysql-%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AEmvcc/</link>
+      <link>http://www.xiaojiong.net/2016/04/13/mysql-%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AEmvcc/</link>
       <pubDate>Wed, 13 Apr 2016 05:16:55 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2016/04/13/mysql-%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AEmvcc/</guid>
+      <guid>http://www.xiaojiong.net/2016/04/13/mysql-%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AEmvcc/</guid>
       <description>
 
 &lt;h3 id=&#34;一-什么是mvcc&#34;&gt;一、什么是MVCC&lt;/h3&gt;
@@ -109,10 +109,10 @@
     
     <item>
       <title>mysql的事务隔离级别</title>
-      <link>http://xiaojiong.net/2016/03/30/mysql%E7%9A%84%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</link>
+      <link>http://www.xiaojiong.net/2016/03/30/mysql%E7%9A%84%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</link>
       <pubDate>Wed, 30 Mar 2016 05:10:36 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2016/03/30/mysql%E7%9A%84%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</guid>
+      <guid>http://www.xiaojiong.net/2016/03/30/mysql%E7%9A%84%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</guid>
       <description>
 
 &lt;h3 id=&#34;事务的特性-acid&#34;&gt;事务的特性（ACID）&lt;/h3&gt;
@@ -231,10 +231,10 @@ ERROR 1062 (23000): Duplicate entry &#39;1&#39; for key &#39;PRIMARY&#39;
     
     <item>
       <title>mysql Explain 详解</title>
-      <link>http://xiaojiong.net/2016/03/12/mysql-explain-%E8%AF%A6%E8%A7%A3/</link>
+      <link>http://www.xiaojiong.net/2016/03/12/mysql-explain-%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Sat, 12 Mar 2016 04:51:22 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2016/03/12/mysql-explain-%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>http://www.xiaojiong.net/2016/03/12/mysql-explain-%E8%AF%A6%E8%A7%A3/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2&#34;&gt;示例数据库下载地址&lt;/a&gt;&lt;/p&gt;
@@ -584,10 +584,10 @@ possible_keys: first_name_last_name
     
     <item>
       <title>mysql Index Condition Pushdown</title>
-      <link>http://xiaojiong.net/2016/02/18/mysql-index-condition-pushdown/</link>
+      <link>http://www.xiaojiong.net/2016/02/18/mysql-index-condition-pushdown/</link>
       <pubDate>Thu, 18 Feb 2016 14:36:47 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2016/02/18/mysql-index-condition-pushdown/</guid>
+      <guid>http://www.xiaojiong.net/2016/02/18/mysql-index-condition-pushdown/</guid>
       <description>
 
 &lt;p&gt;从mysql5.6开始引入一个重要的优化，就是Index Condition Pushdown(ICP)&lt;/p&gt;
@@ -743,10 +743,10 @@ possible_keys: first_name_last_name
     
     <item>
       <title>用mysql实现消息队列</title>
-      <link>http://xiaojiong.net/2016/01/04/%E7%94%A8mysql%E5%AE%9E%E7%8E%B0%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</link>
+      <link>http://www.xiaojiong.net/2016/01/04/%E7%94%A8mysql%E5%AE%9E%E7%8E%B0%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</link>
       <pubDate>Mon, 04 Jan 2016 21:04:15 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2016/01/04/%E7%94%A8mysql%E5%AE%9E%E7%8E%B0%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</guid>
+      <guid>http://www.xiaojiong.net/2016/01/04/%E7%94%A8mysql%E5%AE%9E%E7%8E%B0%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</guid>
       <description>
 
 &lt;p&gt;在复杂的系统中，为了解耦业务之间的耦合关系，往往需要消息队列来实现模块之间的异步通信。消息队列要满足以下要求：&lt;/p&gt;
@@ -831,10 +831,10 @@ UPDATE `queue` SET `status` = &#39;n&#39;, `update_times` = 1451879201, `conn_id
     
     <item>
       <title>【转】MySQL的分页优化</title>
-      <link>http://xiaojiong.net/2015/12/02/%E8%BD%ACmysql%E7%9A%84%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/</link>
+      <link>http://www.xiaojiong.net/2015/12/02/%E8%BD%ACmysql%E7%9A%84%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/</link>
       <pubDate>Wed, 02 Dec 2015 21:39:25 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2015/12/02/%E8%BD%ACmysql%E7%9A%84%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/</guid>
+      <guid>http://www.xiaojiong.net/2015/12/02/%E8%BD%ACmysql%E7%9A%84%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/</guid>
       <description>
 
 &lt;h3 id=&#34;原文链接-http-www-amogoo-com-article-9-http-www-amogoo-com-article-9&#34;&gt;&lt;a href=&#34;http://www.amogoo.com/article/9&#34;&gt;原文链接：http://www.amogoo.com/article/9&lt;/a&gt;&lt;/h3&gt;

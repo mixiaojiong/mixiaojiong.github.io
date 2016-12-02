@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Persistence</title>
-    <link>http://xiaojiong.net/tags/vim/index.xml</link>
+    <link>http://www.xiaojiong.net/tags/vim/index.xml</link>
     <description>Recent content on Persistence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Xiaojiong</copyright>
-    <atom:link href="http://xiaojiong.net/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.xiaojiong.net/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>我的vim配置</title>
-      <link>http://xiaojiong.net/2016/05/15/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE/</link>
+      <link>http://www.xiaojiong.net/2016/05/15/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Sun, 15 May 2016 05:25:32 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2016/05/15/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE/</guid>
+      <guid>http://www.xiaojiong.net/2016/05/15/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE/</guid>
       <description>
 
 &lt;p&gt;github地址:&lt;a href=&#34;https://github.com/mixiaojiong/tool&#34;&gt;https://github.com/mixiaojiong/tool&lt;/a&gt;
@@ -374,10 +374,10 @@ Plugin &#39;maksimr/vim-jsbeautify&#39;                         &amp;quot; 格�
     
     <item>
       <title>vim小技巧</title>
-      <link>http://xiaojiong.net/2015/06/28/vim%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
+      <link>http://www.xiaojiong.net/2015/06/28/vim%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Sun, 28 Jun 2015 19:09:55 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2015/06/28/vim%E5%B0%8F%E6%8A%80%E5%B7%A7/</guid>
+      <guid>http://www.xiaojiong.net/2015/06/28/vim%E5%B0%8F%E6%8A%80%E5%B7%A7/</guid>
       <description>
 
 &lt;h3 id=&#34;块操作&#34;&gt;块操作&lt;/h3&gt;

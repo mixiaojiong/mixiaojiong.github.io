@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Persistence</title>
-    <link>http://xiaojiong.net/tags/linux/index.xml</link>
+    <link>http://www.xiaojiong.net/tags/linux/index.xml</link>
     <description>Recent content on Persistence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Xiaojiong</copyright>
-    <atom:link href="http://xiaojiong.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.xiaojiong.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>一场linux目录限制所引发的血案</title>
-      <link>http://xiaojiong.net/2015/10/14/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</link>
+      <link>http://www.xiaojiong.net/2015/10/14/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</link>
       <pubDate>Wed, 14 Oct 2015 20:18:45 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2015/10/14/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</guid>
+      <guid>http://www.xiaojiong.net/2015/10/14/%E4%B8%80%E5%9C%BAlinux%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E6%89%80%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</guid>
       <description>
 
 &lt;p&gt;我们公司最近出现一个BUG，没有上传过用户头像的用户，无法上传头像。而已经上传过头像的用户，可以更新。
@@ -43,10 +43,10 @@ include/linux/ext3_fs.h:#define EXT3_LINK_MAX           32000
     
     <item>
       <title>linux 常用命令</title>
-      <link>http://xiaojiong.net/2015/06/28/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>http://www.xiaojiong.net/2015/06/28/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sun, 28 Jun 2015 19:04:48 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2015/06/28/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://www.xiaojiong.net/2015/06/28/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>
 
 &lt;h3 id=&#34;去除代码bom头&#34;&gt;去除代码bom头&lt;/h3&gt;

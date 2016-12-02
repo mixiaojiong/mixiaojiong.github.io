@@ -15,10 +15,10 @@ PV: 访问量即Page View, 即页面浏览量或点击量，用户每次刷新�
 <meta property="og:description" content="QPS: 每秒查询率(Query Per Second) ,每秒的响应请求数，是一台服务器每秒能够相应的查询次数，是对一个特定的查询服务器在规定时间内所处理流量多少的衡量标准，也即是最大吞吐能力。 QPS = req/sec = 请求数/秒 QPS统计方式 [一般使用 http_load 进行统计] QPS = 总请求数 / ( 进程总数 * 请求时间 ) QPS: 单个进程每秒请求服务器的成功次数 峰值QPS: 原理：每天80%的访问集中在20%的时间里，这20%时间叫做峰值时间 公式：( 总PV数 * 80% ) / ( 每天秒数 * 20% ) = 峰值时间每秒请求数(QPS)
 PV: 访问量即Page View, 即页面浏览量或点击量，用户每次刷新即被计算一次 单台服务器每天PV计算 公式1：每天总PV = QPS * 3600 * 6 公式2：每天总PV = QPS * 3600 * 8 服务器数量： 机器：峰值时间每秒QPS / 单台机器的QPS = 需要的机器 机器：ceil( 每天总PV / 单台服务器每天总PV )">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://xiaojiong.net/2015/12/22/%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+<meta property="og:url" content="http://www.xiaojiong.net/2015/12/22/%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
@@ -41,10 +41,10 @@ ga('send', 'pageview');
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                                <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                             </h1>
                         
-                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        <a class="button-square" href="http://www.xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
                         
                         
                         
@@ -158,19 +158,19 @@ QPS（TPS）= 并发数/平均响应时间</p>
     
 
     <div class="share">
-        <a class="icon-twitter" href="https://twitter.com/share?text=%e5%b8%b8%e7%94%a8%e7%b3%bb%e7%bb%9f%e6%8c%87%e6%a0%87%e5%8f%8a%e8%ae%a1%e7%ae%97%e6%96%b9%e6%b3%95&url=http%3a%2f%2fxiaojiong.net%2f2015%2f12%2f22%2f%25E5%25B8%25B8%25E7%2594%25A8%25E7%25B3%25BB%25E7%25BB%259F%25E6%258C%2587%25E6%25A0%2587%25E5%258F%258A%25E8%25AE%25A1%25E7%25AE%2597%25E6%2596%25B9%25E6%25B3%2595%2f"
+        <a class="icon-twitter" href="https://twitter.com/share?text=%e5%b8%b8%e7%94%a8%e7%b3%bb%e7%bb%9f%e6%8c%87%e6%a0%87%e5%8f%8a%e8%ae%a1%e7%ae%97%e6%96%b9%e6%b3%95&url=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f12%2f22%2f%25E5%25B8%25B8%25E7%2594%25A8%25E7%25B3%25BB%25E7%25BB%259F%25E6%258C%2587%25E6%25A0%2587%25E5%258F%258A%25E8%25AE%25A1%25E7%25AE%2597%25E6%2596%25B9%25E6%25B3%2595%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2015%2f12%2f22%2f%25E5%25B8%25B8%25E7%2594%25A8%25E7%25B3%25BB%25E7%25BB%259F%25E6%258C%2587%25E6%25A0%2587%25E5%258F%258A%25E8%25AE%25A1%25E7%25AE%2597%25E6%2596%25B9%25E6%25B3%2595%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f12%2f22%2f%25E5%25B8%25B8%25E7%2594%25A8%25E7%25B3%25BB%25E7%25BB%259F%25E6%258C%2587%25E6%25A0%2587%25E5%258F%258A%25E8%25AE%25A1%25E7%25AE%2597%25E6%2596%25B9%25E6%25B3%2595%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2015%2f12%2f22%2f%25E5%25B8%25B8%25E7%2594%25A8%25E7%25B3%25BB%25E7%25BB%259F%25E6%258C%2587%25E6%25A0%2587%25E5%258F%258A%25E8%25AE%25A1%25E7%25AE%2597%25E6%2596%25B9%25E6%25B3%2595%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f12%2f22%2f%25E5%25B8%25B8%25E7%2594%25A8%25E7%25B3%25BB%25E7%25BB%259F%25E6%258C%2587%25E6%25A0%2587%25E5%258F%258A%25E8%25AE%25A1%25E7%25AE%2597%25E6%2596%25B9%25E6%25B3%2595%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
@@ -183,9 +183,9 @@ QPS（TPS）= 并发数/平均响应时间</p>
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'XXX';
-    var disqus_identifier = 'http:\/\/xiaojiong.net\/2015\/12\/22\/%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95\/';
+    var disqus_identifier = 'http:\/\/www.xiaojiong.net\/2015\/12\/22\/%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95\/';
     var disqus_title = '常用系统指标及计算方法';
-    var disqus_url = 'http:\/\/xiaojiong.net\/2015\/12\/22\/%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95\/';
+    var disqus_url = 'http:\/\/www.xiaojiong.net\/2015\/12\/22\/%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -207,7 +207,7 @@ QPS（TPS）= 并发数/平均响应时间</p>
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                        <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#">
                         <i class="fa fa-angle-up"></i>
@@ -224,10 +224,10 @@ QPS（TPS）= 并发数/平均响应时间</p>
             </div>
         </footer>
 
-        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery-1.11.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
-        <script src="http://xiaojiong.net/js/scripts.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://www.xiaojiong.net/js/scripts.js"></script>
     </body>
 </html>
 

@@ -13,10 +13,10 @@
         <meta property="og:title" content="redis&#43;lua实现发号器">
 <meta property="og:description" content="业务场景  拿微博举例：发布微博以后会产生(微博id)，而像微博这样庞大的系统你刚刚发布的微博很可能没有落地。这时你的粉丝看见了你的微博进行评论，需要一个唯一标识（微博id)与评论进行关联。 你的主键是需要有意义的，比如你的分表是按日期划分，那么你的主键可能需要是这样的：2015121200000009。  设计方案  号码设计：采用52位二进制数，其中高28位为秒级时间戳，接下来的4位做业务区分，再接下来的4位做随机值（一会说为什么）。最后16位为自增主键。也就说每秒可以产生65535个唯一ID。 采用redis&#43;lua的设计方案，不需要持久化。只需要cache，因为redis不具有计算能力，需要结合lua脚本的计算能力。  问题  如果某一秒钟已经发出1000个号码，但是这一秒服务重启了（很可能宕机以后立即重启，一瞬间），那么会导致这1000个号码会重复发放。 此服务是单点的。 phpredis扩展有整型溢出的bug  解决方案  四位随机数会解决服务重启以后发送重复号码的概率。 两台机器，一台发奇数，一台偶数。HA可以做轮询。 phpredis扩展修复记  相关代码 -- biz 01 - 15 local biz = tonumber(KEYS[1]) -- random 01 - 15 local random = tonumber(KEYS[2]) -- id 16位 local id = redis.call(&quot;INCRBY&quot;, &quot;impulse&quot;, 2) if (id) then -- max odd if (id &gt;= 65535 and (id % 2 == 1)) then redis.call(&quot;SET&quot;, &quot;impulse&quot;, -1) end -- max even number if (id &gt;= 65534 and (id %2 == 0)) then redis.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://xiaojiong.net/2016/01/25/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8/">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+<meta property="og:url" content="http://www.xiaojiong.net/2016/01/25/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8/">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
@@ -39,10 +39,10 @@ ga('send', 'pageview');
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                                <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                             </h1>
                         
-                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        <a class="button-square" href="http://www.xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
                         
                         
                         
@@ -175,19 +175,19 @@ return sec*16777216 + biz*1048576 + random*65536 + id
     
 
     <div class="share">
-        <a class="icon-twitter" href="https://twitter.com/share?text=redis%2blua%e5%ae%9e%e7%8e%b0%e5%8f%91%e5%8f%b7%e5%99%a8&url=http%3a%2f%2fxiaojiong.net%2f2016%2f01%2f25%2fredis-lua%25E5%25AE%259E%25E7%258E%25B0%25E5%258F%2591%25E5%258F%25B7%25E5%2599%25A8%2f"
+        <a class="icon-twitter" href="https://twitter.com/share?text=redis%2blua%e5%ae%9e%e7%8e%b0%e5%8f%91%e5%8f%b7%e5%99%a8&url=http%3a%2f%2fwww.xiaojiong.net%2f2016%2f01%2f25%2fredis-lua%25E5%25AE%259E%25E7%258E%25B0%25E5%258F%2591%25E5%258F%25B7%25E5%2599%25A8%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2016%2f01%2f25%2fredis-lua%25E5%25AE%259E%25E7%258E%25B0%25E5%258F%2591%25E5%258F%25B7%25E5%2599%25A8%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.xiaojiong.net%2f2016%2f01%2f25%2fredis-lua%25E5%25AE%259E%25E7%258E%25B0%25E5%258F%2591%25E5%258F%25B7%25E5%2599%25A8%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2016%2f01%2f25%2fredis-lua%25E5%25AE%259E%25E7%258E%25B0%25E5%258F%2591%25E5%258F%25B7%25E5%2599%25A8%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwww.xiaojiong.net%2f2016%2f01%2f25%2fredis-lua%25E5%25AE%259E%25E7%258E%25B0%25E5%258F%2591%25E5%258F%25B7%25E5%2599%25A8%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
@@ -200,9 +200,9 @@ return sec*16777216 + biz*1048576 + random*65536 + id
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'XXX';
-    var disqus_identifier = 'http:\/\/xiaojiong.net\/2016\/01\/25\/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8\/';
+    var disqus_identifier = 'http:\/\/www.xiaojiong.net\/2016\/01\/25\/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8\/';
     var disqus_title = 'redis\x2blua实现发号器';
-    var disqus_url = 'http:\/\/xiaojiong.net\/2016\/01\/25\/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8\/';
+    var disqus_url = 'http:\/\/www.xiaojiong.net\/2016\/01\/25\/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -224,7 +224,7 @@ return sec*16777216 + biz*1048576 + random*65536 + id
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                        <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#">
                         <i class="fa fa-angle-up"></i>
@@ -241,10 +241,10 @@ return sec*16777216 + biz*1048576 + random*65536 + id
             </div>
         </footer>
 
-        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery-1.11.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
-        <script src="http://xiaojiong.net/js/scripts.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://www.xiaojiong.net/js/scripts.js"></script>
     </body>
 </html>
 

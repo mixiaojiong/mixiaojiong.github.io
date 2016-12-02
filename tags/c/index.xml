@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Persistence</title>
-    <link>http://xiaojiong.net/tags/c/index.xml</link>
+    <link>http://www.xiaojiong.net/tags/c/index.xml</link>
     <description>Recent content on Persistence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Xiaojiong</copyright>
-    <atom:link href="http://xiaojiong.net/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.xiaojiong.net/tags/c/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>用c语言编写简单的http server</title>
-      <link>http://xiaojiong.net/2015/06/06/%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84http-server/</link>
+      <link>http://www.xiaojiong.net/2015/06/06/%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84http-server/</link>
       <pubDate>Sat, 06 Jun 2015 19:55:21 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2015/06/06/%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84http-server/</guid>
+      <guid>http://www.xiaojiong.net/2015/06/06/%E7%94%A8c%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84http-server/</guid>
       <description>
 
 &lt;p&gt;#简单的http server&lt;/p&gt;

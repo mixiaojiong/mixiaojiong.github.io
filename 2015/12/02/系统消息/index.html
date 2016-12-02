@@ -19,10 +19,10 @@ CREATE TABLE `msg_queue` ( `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT
  入msg_queue表 异步拆分msg_queue表记录 拆分的数据存入msg_relation和msg_conent表中  表结构如下：
 CREATE TABLE `msg_queue` ( `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;, `biz` int(11) unsigned DEFAULT NULL COMMENT &#39;业务号&#39;, `relation` varchar(5000) DEFAULT NULL COMMENT &#39;推送的关系json&#39;, `add_times` int(10) unsigned DEFAULT NULL COMMENT &#39;入库时间&#39;, `update_times` int(10) unsigned DEFAULT NULL COMMENT &#39;更新时间&#39;, `result` varchar(5000) DEFAULT NULL COMMENT &#39;拆分结果&#39;, `status` enum(&#39;no&#39;,&#39;success&#39;,&#39;fail&#39;) DEFAULT &#39;no&#39; COMMENT &#39;no-&gt;未拆分 fail-&gt;失败 success-&gt;成功&#39;, `type` enum(&#39;class&#39;,&#39;sys&#39;) DEFAULT &#39;sys&#39; COMMENT &#39;sys=&gt; 系统消息,class=&gt;班级动态&#39;, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; CREATE TABLE `msg_relation` ( `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;, `biz` int(11) unsigned DEFAULT NULL, `send_id` int(11) unsigned DEFAULT NULL COMMENT &#39;发送者ID&#39;, `receive_id` int(11) unsigned DEFAULT NULL COMMENT &#39;接收ID&#39;, `content_id` int(11) unsigned DEFAULT NULL COMMENT &#39;内容ID&#39;, `add_times` int(10) unsigned DEFAULT NULL COMMENT &#39;入库时间&#39;, `update_times` int(10) unsigned DEFAULT NULL COMMENT &#39;更新时间&#39;, `other_id` int(11) DEFAULT NULL COMMENT &#39;如果receive_id是家长ID但是根据关系不能确定学生的时候，此时other_id就是\n学生id&#39;, PRIMARY KEY (`id`), KEY `idx_receive_id` (`receive_id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; CREATE TABLE `msg_content` ( `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;, `content` text COMMENT &#39;内容&#39;, `add_times` int(10) unsigned DEFAULT NULL COMMENT &#39;入库时间&#39;, `update_times` int(10) unsigned DEFAULT NULL COMMENT &#39;更新时间&#39;, `type` enum(&#39;all&#39;,&#39;class&#39;,&#39;one&#39;) DEFAULT &#39;one&#39; COMMENT &#39;消息类型，one一对一消息, all系统消息&#39;, `is_push` enum(&#39;n&#39;,&#39;y&#39;) DEFAULT &#39;n&#39; COMMENT &#39;是否推送&#39;, `push_object` text COMMENT &#39;推送内容&#39;, `call_back_func` varchar(255) DEFAULT NULL COMMENT &#39;回调函数名字&#39;, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;  存储结构图：">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://xiaojiong.net/2015/12/02/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF/">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+<meta property="og:url" content="http://www.xiaojiong.net/2015/12/02/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF/">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
@@ -45,10 +45,10 @@ ga('send', 'pageview');
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                                <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                             </h1>
                         
-                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        <a class="button-square" href="http://www.xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
                         
                         
                         
@@ -251,19 +251,19 @@ SELECT * FROM msg_relation WHERE id &gt; 100 LIMIT 10
     
 
     <div class="share">
-        <a class="icon-twitter" href="https://twitter.com/share?text=%e7%b3%bb%e7%bb%9f%e6%b6%88%e6%81%af&url=http%3a%2f%2fxiaojiong.net%2f2015%2f12%2f02%2f%25E7%25B3%25BB%25E7%25BB%259F%25E6%25B6%2588%25E6%2581%25AF%2f"
+        <a class="icon-twitter" href="https://twitter.com/share?text=%e7%b3%bb%e7%bb%9f%e6%b6%88%e6%81%af&url=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f12%2f02%2f%25E7%25B3%25BB%25E7%25BB%259F%25E6%25B6%2588%25E6%2581%25AF%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2015%2f12%2f02%2f%25E7%25B3%25BB%25E7%25BB%259F%25E6%25B6%2588%25E6%2581%25AF%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f12%2f02%2f%25E7%25B3%25BB%25E7%25BB%259F%25E6%25B6%2588%25E6%2581%25AF%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2015%2f12%2f02%2f%25E7%25B3%25BB%25E7%25BB%259F%25E6%25B6%2588%25E6%2581%25AF%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f12%2f02%2f%25E7%25B3%25BB%25E7%25BB%259F%25E6%25B6%2588%25E6%2581%25AF%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
@@ -276,9 +276,9 @@ SELECT * FROM msg_relation WHERE id &gt; 100 LIMIT 10
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'XXX';
-    var disqus_identifier = 'http:\/\/xiaojiong.net\/2015\/12\/02\/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF\/';
+    var disqus_identifier = 'http:\/\/www.xiaojiong.net\/2015\/12\/02\/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF\/';
     var disqus_title = '系统消息';
-    var disqus_url = 'http:\/\/xiaojiong.net\/2015\/12\/02\/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF\/';
+    var disqus_url = 'http:\/\/www.xiaojiong.net\/2015\/12\/02\/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -300,7 +300,7 @@ SELECT * FROM msg_relation WHERE id &gt; 100 LIMIT 10
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                        <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#">
                         <i class="fa fa-angle-up"></i>
@@ -317,10 +317,10 @@ SELECT * FROM msg_relation WHERE id &gt; 100 LIMIT 10
             </div>
         </footer>
 
-        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery-1.11.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
-        <script src="http://xiaojiong.net/js/scripts.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://www.xiaojiong.net/js/scripts.js"></script>
     </body>
 </html>
 

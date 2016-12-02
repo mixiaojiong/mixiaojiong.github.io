@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Persistence</title>
-    <link>http://xiaojiong.net/tags/basic/index.xml</link>
+    <link>http://www.xiaojiong.net/tags/basic/index.xml</link>
     <description>Recent content on Persistence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Xiaojiong</copyright>
-    <atom:link href="http://xiaojiong.net/tags/basic/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.xiaojiong.net/tags/basic/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>数据结构－－双向链表</title>
-      <link>http://xiaojiong.net/2015/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
+      <link>http://www.xiaojiong.net/2015/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
       <pubDate>Mon, 07 Dec 2015 23:03:05 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2015/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
+      <guid>http://www.xiaojiong.net/2015/12/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
       <description>
 
 &lt;p&gt;双向链表是数据结构中很重要的一种结构。双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p&gt;

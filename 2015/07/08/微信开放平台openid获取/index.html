@@ -19,10 +19,10 @@
 { &quot;button&quot;:[ { &quot;type&quot;:&quot;click&quot;, &quot;name&quot;:&quot;今日歌曲&quot;, &quot;key&quot;:&quot;V1001_TODAY_MUSIC&quot; }, { &quot;name&quot;:&quot;菜单&quot;, &quot;sub_button&quot;:[ { &quot;type&quot;:&quot;view&quot;, &quot;name&quot;:&quot;test&quot;, &quot;url&quot;:&quot;https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx520c15f417810387&amp;redirect_uri=http%3A%2F%2Fchong.qq.com%2Fphp%2Findex.php%3Fd%3D%26c%3DwxAdapter%26m%3DmobileDeal%26showwxpaytitle%3D1%26vb2ctag%3D4_2030_5_1194_60&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect&quot; }, { &quot;type&quot;:&quot;click&quot;, &quot;name&quot;:&quot;赞一下我们&quot;, &quot;key&quot;:&quot;V1001_GOOD&quot; }] }] }   网页授权的两种方式  snsapi_base （用户无感知）这里我们选择这种 snsapi_userinfo （如果用户没有关注公众号，需要点击授权页）  第一步获取code  https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect
  第二步：通过code换取网页授权access_token $code = $_REQUEST[&#39;code&#39;]; $state = $_REQUEST[&#39;state&#39;]; if (!Comm_Context::Cookie(&#39;openid&#39;)) { error_log(&quot;hehe\n&quot;, 3, &#39;/tmp/a.log&#39;); $url = &quot;https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx8528b110df0f46bb&amp;secret=578d8bdfdb6ff8964ab06c442f062db1&amp;code={$code}&amp;grant_type=authorization_code&quot;; $res = Comm_Curl::request($url); $res = json_decode($res, true); Tool_Login::mkcookie(&#39;openid&#39;, $res[&#39;openid&#39;]); } Comm_Tools::redirect($state);  关于微信内置的调试环境  在开放者工具-&gt;接口测试系统申请，可以申请测试环境（支持回调地址为IP）。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://xiaojiong.net/2015/07/08/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96/">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+<meta property="og:url" content="http://www.xiaojiong.net/2015/07/08/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96/">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
@@ -45,10 +45,10 @@ ga('send', 'pageview');
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                                <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                             </h1>
                         
-                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        <a class="button-square" href="http://www.xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
                         
                         
                         
@@ -179,19 +179,19 @@ Comm_Tools::redirect($state);
     
 
     <div class="share">
-        <a class="icon-twitter" href="https://twitter.com/share?text=%e5%be%ae%e4%bf%a1%e5%bc%80%e6%94%be%e5%b9%b3%e5%8f%b0openid%e8%8e%b7%e5%8f%96&url=http%3a%2f%2fxiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
+        <a class="icon-twitter" href="https://twitter.com/share?text=%e5%be%ae%e4%bf%a1%e5%bc%80%e6%94%be%e5%b9%b3%e5%8f%b0openid%e8%8e%b7%e5%8f%96&url=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwww.xiaojiong.net%2f2015%2f07%2f08%2f%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E6%2594%25BE%25E5%25B9%25B3%25E5%258F%25B0openid%25E8%258E%25B7%25E5%258F%2596%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
@@ -204,9 +204,9 @@ Comm_Tools::redirect($state);
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'XXX';
-    var disqus_identifier = 'http:\/\/xiaojiong.net\/2015\/07\/08\/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96\/';
+    var disqus_identifier = 'http:\/\/www.xiaojiong.net\/2015\/07\/08\/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96\/';
     var disqus_title = '微信开放平台openid获取';
-    var disqus_url = 'http:\/\/xiaojiong.net\/2015\/07\/08\/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96\/';
+    var disqus_url = 'http:\/\/www.xiaojiong.net\/2015\/07\/08\/%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0openid%E8%8E%B7%E5%8F%96\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -228,7 +228,7 @@ Comm_Tools::redirect($state);
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                        <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#">
                         <i class="fa fa-angle-up"></i>
@@ -245,10 +245,10 @@ Comm_Tools::redirect($state);
             </div>
         </footer>
 
-        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery-1.11.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
-        <script src="http://xiaojiong.net/js/scripts.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://www.xiaojiong.net/js/scripts.js"></script>
     </body>
 </html>
 

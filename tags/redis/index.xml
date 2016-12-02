@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Persistence</title>
-    <link>http://xiaojiong.net/tags/redis/index.xml</link>
+    <link>http://www.xiaojiong.net/tags/redis/index.xml</link>
     <description>Recent content on Persistence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Xiaojiong</copyright>
-    <atom:link href="http://xiaojiong.net/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.xiaojiong.net/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>redis&#43;lua实现发号器</title>
-      <link>http://xiaojiong.net/2016/01/25/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8/</link>
+      <link>http://www.xiaojiong.net/2016/01/25/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8/</link>
       <pubDate>Mon, 25 Jan 2016 21:58:21 +0800</pubDate>
       
-      <guid>http://xiaojiong.net/2016/01/25/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8/</guid>
+      <guid>http://www.xiaojiong.net/2016/01/25/redis-lua%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%8F%B7%E5%99%A8/</guid>
       <description>
 
 &lt;h3 id=&#34;业务场景&#34;&gt;业务场景&lt;/h3&gt;

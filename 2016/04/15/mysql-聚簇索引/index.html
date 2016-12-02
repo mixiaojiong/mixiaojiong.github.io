@@ -17,10 +17,10 @@
 二、特点：  聚簇索引确定表中数据的物理顺序 一个表只能包含一个聚簇索引 聚簇索引对于那些经常要搜索范围值的列特别有效（数据在物理上是顺序的）  三、组织形式 聚簇索引是一种数据存储方式，它实际上是在同一个结构中保存了B&#43;树索引和数据行，InnoDB表是按照聚簇索引组织的。InnoDB通过主键聚簇数据，如果没有定义主键，会选择一个唯一的非空索引代替，如图：
 四、缺点  插入速度严重依赖于插入顺序，按照主键的顺序插入到数据表中速度是最快的。 更新聚簇索引列的代价很高，因为需要移动新的数据。 在插入新行，或者主键更新需要移动行的时候，可能导致页分裂，从而导致占用更多的磁盘空间。 二级索引（非聚簇）可能比想象的要大，因为二级索引的叶子节点中包含了引用行的主键列。 二级索引访问需要2次索引查找，而不是一次，因为二级索引保存的不是行的物理位置，而是主键值。  ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/normalize.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/highlight.css">
-        <link rel="stylesheet" href="http://xiaojiong.net/css/style.css">
+<meta property="og:url" content="http://www.xiaojiong.net/2016/04/15/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/normalize.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/highlight.css">
+        <link rel="stylesheet" href="http://www.xiaojiong.net/css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
@@ -43,10 +43,10 @@ ga('send', 'pageview');
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                                <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                             </h1>
                         
-                        <a class="button-square" href="http://xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
+                        <a class="button-square" href="http://www.xiaojiong.net/index.xml"><i class="fa fa-rss"></i></a>
                         
                         
                         
@@ -138,19 +138,19 @@ ga('send', 'pageview');
     
 
     <div class="share">
-        <a class="icon-twitter" href="https://twitter.com/share?text=mysql%20%e8%81%9a%e7%b0%87%e7%b4%a2%e5%bc%95&url=http%3a%2f%2fxiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
+        <a class="icon-twitter" href="https://twitter.com/share?text=mysql%20%e8%81%9a%e7%b0%87%e7%b4%a2%e5%bc%95&url=http%3a%2f%2fwww.xiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fxiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.xiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fxiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwww.xiaojiong.net%2f2016%2f04%2f15%2fmysql-%25E8%2581%259A%25E7%25B0%2587%25E7%25B4%25A2%25E5%25BC%2595%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
@@ -163,9 +163,9 @@ ga('send', 'pageview');
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'XXX';
-    var disqus_identifier = 'http:\/\/xiaojiong.net\/2016\/04\/15\/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95\/';
+    var disqus_identifier = 'http:\/\/www.xiaojiong.net\/2016\/04\/15\/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95\/';
     var disqus_title = 'mysql 聚簇索引';
-    var disqus_url = 'http:\/\/xiaojiong.net\/2016\/04\/15\/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95\/';
+    var disqus_url = 'http:\/\/www.xiaojiong.net\/2016\/04\/15\/mysql-%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -187,7 +187,7 @@ ga('send', 'pageview');
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="Persistence" href="http://xiaojiong.net/">Persistence</a>
+                        <a title="Persistence" href="http://www.xiaojiong.net/">Persistence</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#">
                         <i class="fa fa-angle-up"></i>
@@ -204,10 +204,10 @@ ga('send', 'pageview');
             </div>
         </footer>
 
-        <script src="http://xiaojiong.net/js/jquery-1.11.3.min.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery-1.11.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-        <script src="http://xiaojiong.net/js/jquery.fitvids.js"></script>
-        <script src="http://xiaojiong.net/js/scripts.js"></script>
+        <script src="http://www.xiaojiong.net/js/jquery.fitvids.js"></script>
+        <script src="http://www.xiaojiong.net/js/scripts.js"></script>
     </body>
 </html>
 
